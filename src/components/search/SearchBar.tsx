@@ -170,6 +170,18 @@ export default function SearchBar({ className }: { className?: string }) {
 
   const resultsContent = (
       <>
+        {!trimmedQuery && history.length === 0 && (
+          <div className="flex flex-col items-center px-5 py-7 text-center">
+            <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-accent-soft text-accent">
+              <Search className="h-5 w-5" strokeWidth={2} />
+            </div>
+            <p className="text-sm font-medium text-foreground">¿Qué quieres escuchar?</p>
+            <p className="mt-1 max-w-xs text-xs leading-relaxed text-foreground-muted">
+              Busca canciones, álbumes, playlists o años del archivo.
+            </p>
+          </div>
+        )}
+
         {!query.trim() && history.length > 0 && (
           <div>
             <p className="px-2.5 py-1.5 text-xs uppercase tracking-wide text-foreground-muted/70">
@@ -338,9 +350,8 @@ export default function SearchBar({ className }: { className?: string }) {
   // Desktop/tablet: the anchored popover.
   const dropdown = open && mounted && !isMobile && rect && createPortal(
     <>
-      {/* Dims and blurs everything behind the search the moment it opens, so the
-          expanded bar and its results read clearly against the rest of the UI
-          instead of floating over it half-transparently. Portaled straight to
+      {/* A light dim keeps the results legible without making the page look
+          frozen or broken. Portaled straight to
           <body> — this component sometimes renders inside containers that
           have their own CSS transform (e.g. the expanded player overlay),
           and a `fixed` element nested inside a transformed ancestor stops
@@ -348,7 +359,7 @@ export default function SearchBar({ className }: { className?: string }) {
           ancestor's box, which is what caused the search dropdown to render
           tangled up with the player's own controls instead of over them. */}
       <div
-        className="fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 z-[100] bg-black/25 transition-opacity"
         aria-hidden
         onClick={() => setOpen(false)}
       />
@@ -361,7 +372,7 @@ export default function SearchBar({ className }: { className?: string }) {
           width: rect.width,
           maxHeight: Math.min(448, rect.maxHeight),
         }}
-        className="glass z-[100] overflow-y-auto rounded-xl p-2.5 shadow-2xl"
+        className="z-[101] overflow-y-auto rounded-2xl border border-border bg-background-elevated p-2.5 shadow-2xl"
       >
         {resultsContent}
       </div>
