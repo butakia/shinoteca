@@ -5,7 +5,6 @@ import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Search, X, Clock, Disc3, ListMusic, ArrowLeft } from "lucide-react";
 import clsx from "clsx";
-import { getAlbumById } from "@/lib/data";
 import { useSongs } from "@/context/SongsContext";
 import { usePlaylists } from "@/context/PlaylistsContext";
 import { STORAGE_KEYS } from "@/lib/storage";
@@ -28,7 +27,7 @@ export default function SearchBar({ className }: { className?: string }) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  const { searchSongs, getVisibleAlbums } = useSongs();
+  const { searchSongs, getVisibleAlbums, getAlbumById } = useSongs();
   const { playlists } = usePlaylists();
 
   useEffect(() => setMounted(true), []);
@@ -52,6 +51,15 @@ export default function SearchBar({ className }: { className?: string }) {
   // without a second tap.
   useEffect(() => {
     if (open && isMobile) mobileInputRef.current?.focus();
+  }, [open, isMobile]);
+
+  useEffect(() => {
+    if (!open || !isMobile) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
   }, [open, isMobile]);
 
   // The dropdown/backdrop are portaled to <body> (see below) so they always
@@ -106,8 +114,14 @@ export default function SearchBar({ className }: { className?: string }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "/" && document.activeElement?.tagName !== "INPUT") {
+        const container = containerRef.current;
+        const input = inputRef.current;
+        if (!container || !input) return;
+        const rect = input.getBoundingClientRect();
+        const topElement = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
+        if (rect.width === 0 || rect.height === 0 || !topElement || !container.contains(topElement)) return;
         e.preventDefault();
-        inputRef.current?.focus();
+        input.focus();
       }
       if (e.key === "Escape") {
         inputRef.current?.blur();

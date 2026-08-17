@@ -13,7 +13,6 @@ import PlayerAdSlot from "./PlayerAdSlot";
 import Logo from "@/components/layout/Logo";
 import SearchBar from "@/components/search/SearchBar";
 import MobileMenu from "@/components/layout/MobileMenu";
-import { getAlbumById } from "@/lib/data";
 import { getRelatedSection } from "@/lib/related";
 import { releaseTypeLabels } from "@/lib/format";
 
@@ -23,7 +22,7 @@ import { releaseTypeLabels } from "@/lib/format";
 // (header, mount/unmount, mobile bottom sheet).
 export default function ExpandedPlayer() {
   const { currentSong, isExpanded, setExpanded } = usePlayer();
-  const { getSongsByAlbum, getAllSongs } = useSongs();
+  const { getSongsByAlbum, getAllSongs, getAlbumById } = useSongs();
   const pathname = usePathname();
   const [sidePanelTab, setSidePanelTab] = useState<SidePanelTab>("queue");
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false);

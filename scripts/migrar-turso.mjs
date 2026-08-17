@@ -116,20 +116,36 @@ async function main() {
     } catch (err) {
       console.log("✗");
       console.error(`\n    ${err?.message ?? err}\n`);
-      process.exit(1);
+      cliente.close();
+      process.exitCode = 1;
+      return;
     }
   }
 
-  const tablas = await cliente.execute(
-    "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('User','Session','UploadedSong','SongLike')"
-  );
+  const tablasRequeridas = [
+    "User",
+    "Session",
+    "UploadedSong",
+    "SongLike",
+    "SongOverride",
+    "DeletedSong",
+    "NoticeOverride",
+    "AlbumOverride",
+  ];
+  const placeholders = tablasRequeridas.map(() => "?").join(",");
+  const tablas = await cliente.execute({
+    sql: `SELECT name FROM sqlite_master WHERE type='table' AND name IN (${placeholders})`,
+    args: tablasRequeridas,
+  });
 
   console.log("\n─────────────────────────────────────────────");
   console.log(`  Aplicadas: ${aplicadas} · Ya estaban: ${saltadas}`);
-  console.log(`  Tablas listas: ${tablas.rows.length} de 4`);
+  console.log(`  Tablas listas: ${tablas.rows.length} de ${tablasRequeridas.length}`);
   console.log("─────────────────────────────────────────────\n");
 
-  process.exit(tablas.rows.length === 4 ? 0 : 1);
+  const completa = tablas.rows.length === tablasRequeridas.length;
+  cliente.close();
+  process.exitCode = completa ? 0 : 1;
 }
 
 main();

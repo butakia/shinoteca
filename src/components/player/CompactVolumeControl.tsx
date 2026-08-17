@@ -44,27 +44,33 @@ export default function CompactVolumeControl({ className }: { className?: string
         <Icon className="h-4 w-4" strokeWidth={1.8} />
       </button>
 
+      {/* Outer box sits flush against the button (bottom-full, no margin) so
+          there's no dead gap for the mouse to cross — the gap that used to
+          break hover is now `pb-2` *inside* this box, i.e. still part of the
+          continuously-hoverable region, with the visible card drawn above it. */}
       <div
         className={clsx(
-          "absolute bottom-full left-1/2 z-20 mb-2 -translate-x-1/2 rounded-xl border border-border bg-surface px-3 py-3 shadow-xl transition-all duration-150",
+          "absolute bottom-full left-1/2 z-20 -translate-x-1/2 pb-2 transition-all duration-150",
           open ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
         )}
       >
-        <input
-          type="range"
-          min={0}
-          max={1}
-          step={0.01}
-          value={effectiveVolume}
-          onChange={(e) => setVolume(Number(e.target.value))}
-          aria-label="Volumen"
-          className="volume-slider h-24 w-1.5 cursor-pointer appearance-none rounded-full accent-[var(--accent)]"
-          style={{
-            background: `linear-gradient(to top, var(--accent) ${effectiveVolume * 100}%, rgba(255,255,255,0.12) ${effectiveVolume * 100}%)`,
-            writingMode: "vertical-lr",
-            direction: "rtl",
-          }}
-        />
+        <div className="rounded-xl border border-border bg-surface px-3 py-3 shadow-xl">
+          <input
+            type="range"
+            min={0}
+            max={1}
+            step={0.01}
+            value={effectiveVolume}
+            onChange={(e) => setVolume(Number(e.target.value))}
+            aria-label="Volumen"
+            className="volume-slider h-24 w-1.5 cursor-pointer appearance-none rounded-full accent-[var(--accent)]"
+            style={{
+              background: `linear-gradient(to top, var(--accent) ${effectiveVolume * 100}%, rgba(255,255,255,0.12) ${effectiveVolume * 100}%)`,
+              writingMode: "vertical-lr",
+              direction: "rtl",
+            }}
+          />
+        </div>
       </div>
     </div>
   );

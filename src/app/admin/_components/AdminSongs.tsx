@@ -17,7 +17,6 @@ import {
   Check,
 } from "lucide-react";
 import { useSongs } from "@/context/SongsContext";
-import { getAllAlbums } from "@/lib/data";
 import { deleteUploadedSongAction, approveUploadedSongAction, uploadCoverImageAction } from "@/lib/upload-actions";
 import CoverImage from "@/components/media/CoverImage";
 import { releaseTypeLabels, formatDuration } from "@/lib/format";
@@ -37,6 +36,7 @@ export default function AdminSongs() {
     isDeleted,
     lastEditedAt,
     refreshUploadedSongs,
+    allAlbums,
   } = useSongs();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [uploadOpen, setUploadOpen] = useState(false);
@@ -120,7 +120,7 @@ export default function AdminSongs() {
           <tbody>
             {songs.map((song) => {
               const deleted = isDeleted(song.id);
-              const album = song.albumId ? getAllAlbums().find((a) => a.id === song.albumId) : undefined;
+              const album = song.albumId ? allAlbums.find((a) => a.id === song.albumId) : undefined;
               return (
                 <tr key={song.id} className={`border-t border-border ${deleted ? "opacity-50" : ""}`}>
                   <td className="px-4 py-3">
@@ -239,9 +239,10 @@ export default function AdminSongs() {
           song={editingSong}
           lastEditedAt={lastEditedAt(editingSong.id)}
           onClose={() => setEditingId(null)}
-          onSave={(patch) => {
-            updateSong(editingSong.id, patch);
-            setEditingId(null);
+          onSave={async (patch) => {
+            const result = await updateSong(editingSong.id, patch);
+            if (!result.error) setEditingId(null);
+            return result;
           }}
         />
       )}
@@ -270,15 +271,17 @@ function EditSongModal({
   song: Song;
   lastEditedAt?: string;
   onClose: () => void;
-  onSave: (patch: Partial<Song>) => void;
+  onSave: (patch: Partial<Song>) => Promise<{ error?: string }>;
 }) {
   const [draft, setDraft] = useState<Song>(song);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [coverMode, setCoverMode] = useState<"url" | "upload">("url");
   const [dragOver, setDragOver] = useState(false);
   const [coverUploading, setCoverUploading] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const albums = getAllAlbums();
+  const { allAlbums: albums } = useSongs();
 
   function patch<K extends keyof Song>(key: K, value: Song[K]) {
     setDraft((d) => ({ ...d, [key]: value }));
@@ -339,7 +342,7 @@ function EditSongModal({
     });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const nextErrors: Record<string, string> = {};
     if (!draft.title.trim()) nextErrors.title = "El título no puede estar vacío.";
@@ -348,7 +351,16 @@ function EditSongModal({
       setErrors(nextErrors);
       return;
     }
-    onSave(draft);
+    setSaving(true);
+    setSaveError(null);
+    try {
+      const result = await onSave(draft);
+      if (result.error) setSaveError(result.error);
+    } catch {
+      setSaveError("No se pudo guardar la edición. Comprueba la conexión e inténtalo de nuevo.");
+    } finally {
+      setSaving(false);
+    }
   }
 
   return (
@@ -729,15 +741,21 @@ function EditSongModal({
         </div>
 
         <div className="flex items-center justify-end gap-2 border-t border-border px-5 py-4">
+          {saveError && <p className="mr-auto text-xs text-danger">{saveError}</p>}
           <button
             type="button"
             onClick={onClose}
+            disabled={saving}
             className="rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground hover:bg-surface-hover"
           >
             Cancelar
           </button>
-          <button type="submit" className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white hover:bg-accent/90">
-            Guardar cambios
+          <button
+            type="submit"
+            disabled={saving || coverUploading}
+            className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white hover:bg-accent/90 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {saving ? "Guardando…" : "Guardar cambios"}
           </button>
         </div>
       </form>

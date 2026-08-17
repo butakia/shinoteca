@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { prisma } from "./prisma";
 import { uploadPublicFile } from "./upload-storage";
 import { getCurrentUser } from "./auth";
+import { getAllSongs } from "./data";
 import type { ReleaseType } from "./types";
 
 export interface UploadSongInput {
@@ -153,4 +154,107 @@ export async function deleteUploadedSongAction(id: string): Promise<void> {
   revalidatePath("/canciones");
   revalidatePath("/explorar");
   revalidatePath("/admin");
+}
+
+// Edits to a song from the STATIC catalog (title/cover/genre/anything from
+// "Editar canción") used to write only to the admin's own browser
+// localStorage: it looked saved to whoever made the edit, but no other
+// visitor on any other device ever saw it. This persists the same patch
+// server-side so it applies for everyone. The browser still keeps its own
+// local copy too (see SongsContext) for instant feedback without a round trip.
+export async function saveSongOverrideAction(
+  songId: string,
+  patch: Record<string, unknown>
+): Promise<{ error?: string }> {
+  const user = await getCurrentUser();
+  if (!user?.isAdmin) return { error: "No autorizado." };
+
+  await prisma.songOverride.upsert({
+    where: { songId },
+    create: { songId, patch: JSON.stringify(patch) },
+    update: { patch: JSON.stringify(patch) },
+  });
+
+  revalidatePath("/");
+  revalidatePath("/canciones");
+  revalidatePath("/explorar");
+  revalidatePath(`/canciones/${songId}`);
+
+  return {};
+}
+
+type LocalSongOverride = {
+  songId: string;
+  patch: Record<string, unknown>;
+  editedAt: string;
+};
+
+// One-time bridge for edits made before server-side overrides existed. Older
+// versions of the admin saved them only in localStorage, so deploying the new
+// tables alone would still leave those covers/titles stranded in the original
+// browser. Only an authenticated admin can import them, and a local edit never
+// replaces a newer server copy from another device.
+export async function syncLocalSongOverridesAction(
+  entries: LocalSongOverride[]
+): Promise<{ error?: string; synced?: number }> {
+  const user = await getCurrentUser();
+  if (!user?.isAdmin) return { error: "No autorizado." };
+
+  const validSongIds = new Set(getAllSongs().map((song) => song.id));
+  const safeEntries = entries
+    .filter((entry) => validSongIds.has(entry.songId) && !Number.isNaN(Date.parse(entry.editedAt)))
+    .slice(0, 500);
+
+  let synced = 0;
+  for (const entry of safeEntries) {
+    const existing = await prisma.songOverride.findUnique({ where: { songId: entry.songId } });
+    if (existing && existing.updatedAt.getTime() >= Date.parse(entry.editedAt)) continue;
+
+    await prisma.songOverride.upsert({
+      where: { songId: entry.songId },
+      create: { songId: entry.songId, patch: JSON.stringify(entry.patch), updatedAt: new Date(entry.editedAt) },
+      update: { patch: JSON.stringify(entry.patch), updatedAt: new Date(entry.editedAt) },
+    });
+    synced += 1;
+  }
+
+  if (synced > 0) {
+    revalidatePath("/");
+    revalidatePath("/canciones");
+    revalidatePath("/explorar");
+  }
+
+  return { synced };
+}
+
+export async function resetSongOverrideAction(songId: string): Promise<{ error?: string }> {
+  const user = await getCurrentUser();
+  if (!user?.isAdmin) return { error: "No autorizado." };
+
+  await prisma.songOverride.delete({ where: { songId } }).catch(() => {});
+  revalidatePath("/");
+  revalidatePath("/canciones");
+  revalidatePath("/explorar");
+
+  return {};
+}
+
+// Same per-browser problem as the overrides above, but for "eliminar" on a
+// static catalog song.
+export async function setDeletedSongAction(songId: string, deleted: boolean): Promise<{ error?: string }> {
+  const user = await getCurrentUser();
+  if (!user?.isAdmin) return { error: "No autorizado." };
+
+  if (deleted) {
+    await prisma.deletedSong.upsert({ where: { songId }, create: { songId }, update: {} });
+  } else {
+    await prisma.deletedSong.delete({ where: { songId } }).catch(() => {});
+  }
+
+  revalidatePath("/");
+  revalidatePath("/canciones");
+  revalidatePath("/explorar");
+  revalidatePath("/admin");
+
+  return {};
 }

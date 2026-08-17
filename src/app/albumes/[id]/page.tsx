@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { getAlbumById, getArtistById } from "@/lib/data";
+import { getArtistById } from "@/lib/data";
 import { useSongs } from "@/context/SongsContext";
 import CoverImage from "@/components/media/CoverImage";
 import SongRow from "@/components/song/SongRow";
@@ -14,7 +14,7 @@ import { Disc3 } from "lucide-react";
 
 export default function AlbumPage() {
   const params = useParams<{ id: string }>();
-  const { getSongsByAlbum } = useSongs();
+  const { getSongsByAlbum, getAlbumById } = useSongs();
   const album = getAlbumById(params.id);
   if (!album) return <PageDisabledNotice />;
 

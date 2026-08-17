@@ -9,7 +9,7 @@ import { useFavorites } from "@/context/FavoritesContext";
 import CoverImage from "@/components/media/CoverImage";
 import SongMenu from "./SongMenu";
 import { formatDuration } from "@/lib/format";
-import { getAlbumById } from "@/lib/data";
+import { useSongs } from "@/context/SongsContext";
 
 type SongRowProps = {
   song: Song;
@@ -21,6 +21,7 @@ type SongRowProps = {
 export default function SongRow({ song, index, queue, showAlbum = true }: SongRowProps) {
   const { currentSong, isPlaying, playSong, togglePlay } = usePlayer();
   const { isFavorite, toggleFavorite } = useFavorites();
+  const { getAlbumById } = useSongs();
   const isCurrent = currentSong?.id === song.id;
   const album = song.albumId ? getAlbumById(song.albumId) : undefined;
 

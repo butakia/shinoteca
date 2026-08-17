@@ -68,3 +68,43 @@ model SongLike {
   songId String @id
   count  Int    @default(0)
 }
+
+// Admin edits to a STATIC catalog song (title/cover/genre/etc. — anything
+// from the "Editar canción" modal) used to live only in the admin's own
+// browser localStorage: it looked like it worked (visible immediately to
+// whoever made the edit) but no other visitor, on any other device, ever
+// saw it. patch is a JSON-encoded Partial<Song>, merged server-side into the
+// catalog every visitor gets from getUploadedSongs()/the songs API.
+model SongOverride {
+  songId    String   @id
+  patch     String
+  updatedAt DateTime @updatedAt
+}
+
+// Same per-browser problem as above, but for "eliminar" on a static catalog
+// song: soft-deleted it only in the deleting admin's own browser.
+model DeletedSong {
+  songId    String   @id
+  deletedAt DateTime @default(now())
+}
+
+// Admin edits to a notice/disclaimer (text, enabled, visibility, priority —
+// anything from the "Avisos" tab in /admin) used to live only in
+// localStorage, same per-browser problem as SongOverride above. patch is a
+// JSON-encoded Partial<Notice>, keyed by NoticeKey.
+model NoticeOverride {
+  key       String   @id
+  patch     String
+  updatedAt DateTime @updatedAt
+}
+
+// Cover/title overrides for an album, plus admin-created albums that don't
+// exist in the static fixtures (e.g. "Inéditos"). isCustom distinguishes a
+// brand-new album from a patch to an existing static one — patch is a
+// JSON-encoded Partial<Album> either way.
+model AlbumOverride {
+  albumId   String   @id
+  patch     String
+  isCustom  Boolean  @default(false)
+  updatedAt DateTime @updatedAt
+}

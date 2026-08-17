@@ -20,6 +20,7 @@ import clsx from "clsx";
 import { usePlayer } from "@/context/PlayerContext";
 import { useFavorites } from "@/context/FavoritesContext";
 import { usePlaylists } from "@/context/PlaylistsContext";
+import { useSongs } from "@/context/SongsContext";
 import CoverImage from "@/components/media/CoverImage";
 import PlayerControls from "./PlayerControls";
 import ProgressBar from "./ProgressBar";
@@ -28,7 +29,6 @@ import OfflineDownloadButton from "./OfflineDownloadButton";
 import AudioVisualizer from "./AudioVisualizer";
 import AmbientBackground from "./AmbientBackground";
 import PlaylistPickerModal from "@/components/song/PlaylistPickerModal";
-import { getAlbumById } from "@/lib/data";
 import { releaseTypeLabels, formatDuration } from "@/lib/format";
 import type { SidePanelTab } from "./SidePanel";
 
@@ -49,6 +49,7 @@ export default function PlayerStage({
   const { currentSong, position, duration, seek, addToQueue, isPlaying, next, previous } = usePlayer();
   const { isFavorite, toggleFavorite, getReaction, setReaction, likeCounts, ensureLikeCount } = useFavorites();
   const { playlists } = usePlaylists();
+  const { getAlbumById } = useSongs();
   const [showPlaylistPicker, setShowPlaylistPicker] = useState(false);
   const [showMoreActions, setShowMoreActions] = useState(false);
   const [showVolumeSheet, setShowVolumeSheet] = useState(false);
@@ -115,14 +116,20 @@ export default function PlayerStage({
           used to sit pinned to the top with a big dead void below it — now it
           centers in whatever space is actually available, and still scrolls
           normally if the viewport is too short to fit everything. */}
-      <div className="flex min-h-full flex-col items-center justify-center px-4 py-6 sm:py-10">
+      <div className="flex min-h-full flex-col items-center justify-center px-4 py-3 sm:py-4">
       {/* Explicit w-full + max-w-sm: as a bare flex column this box sized to
           its widest child (~280px), so the cover never got near the "big
           artwork" of the reference layout no matter what max-width it asked
           for. Pinning the column width makes every child predictable. */}
-      <div key={currentSong.id} className="animate-song-in mx-auto flex w-full max-w-sm flex-col items-center gap-3 text-center sm:gap-5">
+      <div key={currentSong.id} className="animate-song-in mx-auto flex w-full max-w-sm flex-col items-center gap-2.5 text-center sm:gap-3">
         <div
-          className="w-full max-w-[78vw] touch-pan-y select-none sm:max-w-xs"
+          // Capping width by BOTH vw and vh (not just vw) means the cover
+          // shrinks on short viewports too — a common laptop window (say
+          // 1400x700 with browser chrome) used to keep the cover at its full
+          // ~320px size regardless of available height, pushing the actual
+          // transport controls below the fold and forcing a scroll just to
+          // reach play/pause.
+          className="w-full max-w-[min(78vw,38vh)] touch-pan-y select-none sm:max-w-[min(20rem,36vh)]"
           onTouchStart={onCoverTouchStart}
           onTouchMove={onCoverTouchMove}
           onTouchEnd={onCoverTouchEnd}
@@ -135,7 +142,7 @@ export default function PlayerStage({
           <CoverImage src={currentSong.coverUrl} title={currentSong.title} size="large" priority className="shadow-2xl" />
         </div>
 
-        <AudioVisualizer isPlaying={isPlaying} className="w-full max-w-sm" responsiveHeightClass="h-7 sm:h-14" />
+        <AudioVisualizer isPlaying={isPlaying} className="w-full max-w-sm" responsiveHeightClass="h-7 sm:h-10" />
 
         <div className="w-full">
           <h1 className="truncate text-xl font-bold text-foreground sm:text-3xl">{currentSong.title}</h1>

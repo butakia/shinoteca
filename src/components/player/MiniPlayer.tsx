@@ -11,12 +11,13 @@ import PlayerControls from "./PlayerControls";
 import ProgressBar from "./ProgressBar";
 import VolumeControl from "./VolumeControl";
 import AmbientBackground from "./AmbientBackground";
-import { getAlbumById } from "@/lib/data";
+import { useSongs } from "@/context/SongsContext";
 import PlaylistPickerModal from "@/components/song/PlaylistPickerModal";
 
 export default function MiniPlayer() {
   const { currentSong, position, duration, seek, error, setExpanded, next, previous } = usePlayer();
   const { isFavorite, toggleFavorite } = useFavorites();
+  const { getAlbumById } = useSongs();
   const [showPlaylistPicker, setShowPlaylistPicker] = useState(false);
   const pathname = usePathname();
   const touchStartY = useRef<number | null>(null);

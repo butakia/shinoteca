@@ -63,10 +63,12 @@ grep -c '"url": "/music/' src/lib/data/imported.generated.ts   # debe dar 0
 ## Paso 4 — Aplicar las migraciones en Turso
 
 ```bash
-npx prisma migrate deploy
+node scripts/migrar-turso.mjs
 ```
 
-Crea las tablas de usuarios, sesiones, canciones subidas y "me gusta".
+Crea y actualiza en Turso las tablas de usuarios, sesiones, canciones
+subidas, "me gusta" y las ediciones administrativas compartidas. El comando
+es idempotente: las migraciones ya aplicadas se omiten automáticamente.
 
 ---
 

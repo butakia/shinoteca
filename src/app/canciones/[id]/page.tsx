@@ -2,7 +2,6 @@
 
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { getAlbumById } from "@/lib/data";
 import { useSongs } from "@/context/SongsContext";
 import { useNotices } from "@/context/NoticesContext";
 import CoverImage from "@/components/media/CoverImage";
@@ -17,7 +16,7 @@ import { ShieldAlert } from "lucide-react";
 
 export default function SongDetailPage() {
   const params = useParams<{ id: string }>();
-  const { getSongById, getSongsByAlbum, getAllSongs } = useSongs();
+  const { getSongById, getSongsByAlbum, getAllSongs, getAlbumById } = useSongs();
   const { getNoticeText } = useNotices();
   const song = getSongById(params.id);
   if (!song) return <PageDisabledNotice />;

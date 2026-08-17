@@ -8,7 +8,6 @@ import { useSongs } from "@/context/SongsContext";
 import PlayerStage from "@/components/player/PlayerStage";
 import SidePanel, { type SidePanelTab } from "@/components/player/SidePanel";
 import PageDisabledNotice from "@/components/institutional/PageDisabledNotice";
-import { getAlbumById } from "@/lib/data";
 import { getRelatedSection } from "@/lib/related";
 
 // The standalone reproduction experience — a real page (not the Home feed
@@ -19,7 +18,7 @@ import { getRelatedSection } from "@/lib/related";
 export default function PlayPage() {
   const params = useParams<{ songId: string }>();
   const { currentSong, playSong } = usePlayer();
-  const { getSongById, getSongsByAlbum, getAllSongs } = useSongs();
+  const { getSongById, getSongsByAlbum, getAllSongs, getAlbumById } = useSongs();
   const [sidePanelTab, setSidePanelTab] = useState<SidePanelTab>("queue");
   const [mobilePanelOpen, setMobilePanelOpen] = useState(false);
 
