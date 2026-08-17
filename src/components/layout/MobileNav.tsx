@@ -8,7 +8,7 @@ import { usePlayer } from "@/context/PlayerContext";
 
 export default function MobileNav() {
   const pathname = usePathname();
-  const { currentSong } = usePlayer();
+  const { currentSong, setExpanded } = usePlayer();
 
   return (
     <nav
@@ -26,6 +26,7 @@ export default function MobileNav() {
           <Link
             key={item.href}
             href={item.href}
+            onClick={() => setExpanded(false)}
             className={clsx(
               "flex flex-1 flex-col items-center justify-center gap-1 py-2.5 text-[10px] font-medium transition-colors",
               active ? "text-white" : "text-foreground-muted"

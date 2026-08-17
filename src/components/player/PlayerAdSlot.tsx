@@ -19,10 +19,10 @@ export default function PlayerAdSlot() {
         </span>
       </div>
       <Link
-        href="/premium"
+        href="/donaciones"
         className="mt-1.5 block text-center text-[11px] text-foreground-muted hover:text-accent"
       >
-        Actualiza desde 1 USD para eliminar los anuncios
+        Apoya desde US$0.10 para quitar los anuncios
       </Link>
     </div>
   );

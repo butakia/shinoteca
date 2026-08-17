@@ -16,4 +16,4 @@ export const mobileNavItems = [
   { href: "/playlists", label: "Playlists", icon: ListMusic },
 ];
 
-export const donationNavItem = { href: "/donaciones", label: "Apoyar el archivo", icon: HeartHandshake };
+export const donationNavItem = { href: "/donaciones", label: "Apoyar el proyecto", icon: HeartHandshake };

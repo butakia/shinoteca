@@ -62,7 +62,7 @@ function titleCase(str) {
     .join(" ");
 }
 
-function cleanTrackTitle(rawBase, albumArtistPrefix) {
+function cleanTrackTitle(rawBase, albumArtistPrefix, interpretTrackNumber = true) {
   let name = rawBase;
 
   const stripArtistPrefix = () => {
@@ -84,7 +84,9 @@ function cleanTrackTitle(rawBase, albumArtistPrefix) {
   // has to eat any of ". - )" before the real title starts, not just "-" —
   // leaving a stray leading "." was what broke the artist-prefix strip,
   // since ". Porta - Song" doesn't start with "porta -" the way "Porta - Song" does)
-  const trackMatch = name.match(/^\s*(\d{1,3})\s*[.\-)]*\s*(.*)$/);
+  const trackMatch = interpretTrackNumber
+    ? name.match(/^\s*(\d{1,3})\s*[.\-)]*\s*(.*)$/)
+    : null;
   let trackNumber;
   if (trackMatch && trackMatch[2].trim().length > 0) {
     trackNumber = parseInt(trackMatch[1], 10);
@@ -98,6 +100,9 @@ function cleanTrackTitle(rawBase, albumArtistPrefix) {
   name = name.replace(/\s*\[\s*(?:producido por|prod\.?)\s+.*?\]\s*$/i, "").trim();
   // normalize bracketed feature credits: "[ Feat X ]" -> "(feat. X)"
   name = name.replace(/\[\s*feat\.?\s+(.*?)\s*\]/gi, (_, who) => `(feat. ${who})`);
+  // Las recopilaciones de temas sueltos suelen añadir el nombre del artista
+  // al final ("Tema - Shinoflow-mc"). No forma parte del título visible.
+  name = name.replace(/\s*-\s*(?:shino\s*flow|carlos\s+sadness)(?:-mc)?\s*$/i, "").trim();
   name = name.replace(/_/g, " ").replace(/\s{2,}/g, " ").trim();
   const cleaned = titleCase(name);
   return { title: cleaned, trackNumber };
@@ -180,7 +185,7 @@ async function run() {
       id: albumSlug,
       title: albumTitle,
       artistId: thirdParty ? slugify(artist) : "shino-flow",
-      releaseType: "lp",
+      releaseType: /^in[eé]dit[oa]s?$/i.test(albumTitle) ? "compilation" : "lp",
       year,
       coverUrl,
       coverSource: coverUrl ? "uploaded" : "fallback",
@@ -191,7 +196,11 @@ async function run() {
     for (const audioFile of audioFiles) {
       const ext = path.extname(audioFile).toLowerCase();
       const base = path.basename(audioFile, ext);
-      const { title: trackTitle, trackNumber } = cleanTrackTitle(base, artist);
+      const { title: trackTitle, trackNumber } = cleanTrackTitle(
+        base,
+        artist,
+        !/^in[eé]dit[oa]s?$/i.test(albumTitle)
+      );
       const trackSlug = slugify(`${albumSlug}-${trackNumber ?? 0}-${trackTitle}`);
       const destFile = `${trackSlug}${ext}`;
       const srcPath = path.join(folderPath, audioFile);
@@ -222,7 +231,7 @@ async function run() {
         originalFileName: audioFile,
         artist,
         albumId: albumSlug,
-        releaseType: "lp",
+        releaseType: /^in[eé]dit[oa]s?$/i.test(albumTitle) ? "compilation" : "lp",
         year,
         trackNumber,
         duration,

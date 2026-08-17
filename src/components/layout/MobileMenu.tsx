@@ -20,6 +20,7 @@ import {
   Music2,
 } from "lucide-react";
 import { useArtistFilter } from "@/context/ArtistFilterContext";
+import { usePlayer } from "@/context/PlayerContext";
 
 function OnlyShinoflowToggle() {
   const { onlyShinoflow, toggleOnlyShinoflow } = useArtistFilter();
@@ -65,6 +66,7 @@ const ITEMS = [
 export default function MobileMenu({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const { setExpanded } = usePlayer();
 
   useEffect(() => setMounted(true), []);
 
@@ -106,7 +108,10 @@ export default function MobileMenu({ className }: { className?: string }) {
           <div key={item.label}>
             <Link
               href={item.href}
-              onClick={() => setOpen(false)}
+              onClick={() => {
+                setOpen(false);
+                setExpanded(false);
+              }}
               className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-white/10 hover:text-foreground"
             >
               <item.icon className="h-4.5 w-4.5 shrink-0" strokeWidth={1.8} />

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ListMusic, Plus, ChevronDown, Sparkles, UploadCloud, LogIn, LogOut, ShieldCheck, Download, Music2 } from "lucide-react";
+import { ListMusic, Plus, ChevronDown, UploadCloud, LogIn, LogOut, ShieldCheck, Download, Music2 } from "lucide-react";
 import clsx from "clsx";
 import { primaryNavItems, donationNavItem } from "./nav-items";
 import { usePlaylists } from "@/context/PlaylistsContext";
@@ -12,6 +12,7 @@ import { useAuth } from "@/context/AuthContext";
 import { useArtistFilter } from "@/context/ArtistFilterContext";
 import CoverImage from "@/components/media/CoverImage";
 import Logo from "./Logo";
+import { usePlayer } from "@/context/PlayerContext";
 
 function OnlyShinoflowToggle() {
   const { onlyShinoflow, toggleOnlyShinoflow } = useArtistFilter();
@@ -46,6 +47,7 @@ function OnlyShinoflowToggle() {
 export default function Sidebar() {
   const pathname = usePathname();
   const { user, isAdmin, logout } = useAuth();
+  const { setExpanded } = usePlayer();
 
   return (
     <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col border-r border-border bg-background-elevated/80 backdrop-blur-xl lg:flex">
@@ -61,6 +63,7 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setExpanded(false)}
               className={clsx(
                 "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                 active
@@ -80,6 +83,7 @@ export default function Sidebar() {
       <div className="border-t border-border p-3">
         <Link
           href="/descargas"
+          onClick={() => setExpanded(false)}
           className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
         >
           <Download className="h-4.5 w-4.5" strokeWidth={1.8} />
@@ -88,6 +92,7 @@ export default function Sidebar() {
         <OnlyShinoflowToggle />
         <Link
           href="/subir"
+          onClick={() => setExpanded(false)}
           className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
         >
           <UploadCloud className="h-4.5 w-4.5" strokeWidth={1.8} />
@@ -96,6 +101,7 @@ export default function Sidebar() {
         {isAdmin && (
           <Link
             href="/admin"
+            onClick={() => setExpanded(false)}
             className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
           >
             <ShieldCheck className="h-4.5 w-4.5" strokeWidth={1.8} />
@@ -114,6 +120,7 @@ export default function Sidebar() {
         ) : (
           <Link
             href="/login"
+            onClick={() => setExpanded(false)}
             className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
           >
             <LogIn className="h-4.5 w-4.5" strokeWidth={1.8} />
@@ -121,14 +128,8 @@ export default function Sidebar() {
           </Link>
         )}
         <Link
-          href="/premium"
-          className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
-        >
-          <Sparkles className="h-4.5 w-4.5" strokeWidth={1.8} />
-          Premium
-        </Link>
-        <Link
           href={donationNavItem.href}
+          onClick={() => setExpanded(false)}
           className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-foreground-muted transition-colors hover:bg-surface-hover hover:text-foreground"
         >
           <donationNavItem.icon className="h-4.5 w-4.5" strokeWidth={1.8} />

@@ -12,7 +12,7 @@ const links = [
   { href: "/derechos", label: "Derechos y solicitudes" },
   { href: "/terminos", label: "Términos" },
   { href: "/privacidad", label: "Privacidad" },
-  { href: "/donaciones", label: "Apoyar el archivo" },
+  { href: "/donaciones", label: "Apoyar el proyecto" },
 ];
 
 export default function SiteFooter() {

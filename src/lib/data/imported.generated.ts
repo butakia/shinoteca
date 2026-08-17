@@ -4,6 +4,16 @@ import type { Song, Album } from "@/lib/types";
 
 export const importedAlbums: Album[] = [
   {
+    "id": "shino-flow-ineditas",
+    "title": "Inéditas",
+    "artistId": "shino-flow",
+    "releaseType": "compilation",
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "description": "Importado desde la carpeta original \"Inéditas\".",
+    "isThirdParty": false
+  },
+  {
     "id": "porta-no-es-cuestion-de-edades",
     "title": "No Es Cuestión de Edades",
     "artistId": "porta",
@@ -110,6 +120,2342 @@ export const importedAlbums: Album[] = [
 ];
 
 export const importedSongs: Song[] = [
+  {
+    "id": "shino-flow-ineditas-0-5-minutos-en-herzio",
+    "title": "5 Minutos en Herzio",
+    "originalFileName": "5 minutos en Herzio.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 196,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952328/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-5-minutos-en-herzio.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3683208,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-alicia-encadenada-terminada",
+    "title": "Alicia Encadenada (Terminada)",
+    "originalFileName": "Alicia Encadenada (Terminada).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 215,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952060/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-alicia-encadenada-terminada.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3982216,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-alma-perdida-con-carlos-talavera",
+    "title": "Alma Perdida (Con Carlos Talavera)",
+    "originalFileName": "Alma Perdida (Con Carlos Talavera).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 231,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952065/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-alma-perdida-con-carlos-talavera.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 4243706,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-amor-misscafeinado-acustico",
+    "title": "Amor Misscafeinado (Acústico)",
+    "originalFileName": "Amor Misscafeinado (Acústico).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 77,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952069/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-amor-misscafeinado-acustico.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1779414,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-amor-descafeinado-primera-version",
+    "title": "Amor Descafeinado (Primera Versión)",
+    "originalFileName": "Amor descafeinado (Primera Versión).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 196,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952067/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-amor-descafeinado-primera-version.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3683224,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-amor-pt-1-con-welelo-trafik-marco-skinny-scurro",
+    "title": "Amor Pt 1 (Con Welelo, Trafik, Marco, Skinny & SCurro)",
+    "originalFileName": "Amor pt 1 (Con Welelo, Trafik, Marco, Skinny & SCurro).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 343,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952071/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-amor-pt-1-con-welelo-trafik-marco-skinny-scurro.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 6035935,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-aprende-a-tocar-el-piano-con-borga",
+    "title": "Aprende a Tocar el Piano (Con Borga)",
+    "originalFileName": "Aprende A Tocar El Piano (Con Borga).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 147,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952074/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-aprende-a-tocar-el-piano-con-borga.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2899134,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-astrolabios",
+    "title": "Astrolabios",
+    "originalFileName": "Astrolabios.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 130,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952076/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-astrolabios.mp3",
+        "format": "MP3",
+        "bitrate": 256,
+        "fileSize": 4196937,
+        "qualityLabel": "256 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-bosque-adentro",
+    "title": "Bosque Adentro",
+    "originalFileName": "Bosque adentro.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 185,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952079/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-bosque-adentro.mp3",
+        "format": "MP3",
+        "bitrate": 192,
+        "fileSize": 4550040,
+        "qualityLabel": "192 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-brave-soldier-rmx",
+    "title": "Brave Soldier RMX",
+    "originalFileName": "Brave Soldier RMX.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 0,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952080/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-brave-soldier-rmx.m4a",
+        "format": "MP3",
+        "bitrate": 160,
+        "fileSize": 2175515,
+        "qualityLabel": "160 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-calles-de-blues",
+    "title": "Calles de Blues",
+    "originalFileName": "Calles de Blues - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 126,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952082/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-calles-de-blues.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2216690,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-carta-de-ajuste-con-dj-real-el-cansino",
+    "title": "Carta de Ajuste (Con Dj Real & el Cansino)",
+    "originalFileName": "Carta de ajuste (Con Dj Real & El Cansino) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 280,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952083/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-carta-de-ajuste-con-dj-real-el-cansino.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 4575225,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-ciudadanos-de-un-lugar-llamado-mundo-con-jamie-cullum-fran",
+    "title": "Ciudadanos de un Lugar Llamado Mundo (Con Jamie Cullum, Frank-T & Nita) - Shinof-mc",
+    "originalFileName": "Ciudadanos de un lugar llamado mundo (Con Jamie Cullum, Frank-T & Nita) - Shinof-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 140,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952085/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-ciudadanos-de-un-lugar-llamado-mundo-con-jamie-cullum-fran.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2330170,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-confia-en-mi",
+    "title": "Confia en Mi",
+    "originalFileName": "Confia en mi - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 182,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952087/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-confia-en-mi.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3007848,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-corasao-de-aglomerao-con-joseka-el-cansino",
+    "title": "Corasao de Aglomerao (Con Joseka & el Cansino)",
+    "originalFileName": "Corasao de aglomerao (Con Joseka & El Cansino) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 175,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952088/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-corasao-de-aglomerao-con-joseka-el-cansino.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2898031,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-corazon-de-banana",
+    "title": "Corazon de Banana",
+    "originalFileName": "Corazon de Banana.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 173,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952089/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-corazon-de-banana.mp3",
+        "format": "MP3",
+        "bitrate": 64,
+        "fileSize": 1506930,
+        "qualityLabel": "64 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-cuando-me-faltes-con-yesh",
+    "title": "Cuando Me Faltes (Con Yesh)",
+    "originalFileName": "Cuando me faltes (Con Yesh).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 160,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952091/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-cuando-me-faltes-con-yesh.mp3",
+        "format": "MP3",
+        "bitrate": 192,
+        "fileSize": 3852103,
+        "qualityLabel": "192 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-cuervos-con-ursula",
+    "title": "Cuervos (Con Ursula)",
+    "originalFileName": "Cuervos (Con Ursula).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 0,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952092/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-cuervos-con-ursula.m4a",
+        "format": "MP3",
+        "bitrate": 24,
+        "fileSize": 1650324,
+        "qualityLabel": "24 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-cuesta-mucho-dar-un-abrazo",
+    "title": "Cuesta Mucho Dar un Abrazo",
+    "originalFileName": "Cuesta mucho dar un abrazo - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 112,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952095/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-cuesta-mucho-dar-un-abrazo.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1886895,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-dame-1-minuto",
+    "title": "Dame 1 Minuto",
+    "originalFileName": "Dame 1 Minuto - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 84,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952101/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-dame-1-minuto.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1439248,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-del-shi",
+    "title": "Del Shi",
+    "originalFileName": "Del Shi - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 91,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952103/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-del-shi.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1551293,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-del-corazon-a-los-bostezos",
+    "title": "Del Corazon a los Bostezos",
+    "originalFileName": "Del corazon a los bostezos.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 74,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952102/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-del-corazon-a-los-bostezos.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1179379,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-dibujar-es-llorar",
+    "title": "Dibujar Es Llorar",
+    "originalFileName": "Dibujar es llorar - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 91,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952104/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-dibujar-es-llorar.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1554263,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-dibujos-en-3d",
+    "title": "Dibujos en 3D",
+    "originalFileName": "Dibujos en 3D.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 254,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952107/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-dibujos-en-3d.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 4059636,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-directo",
+    "title": "Directo",
+    "originalFileName": "Directo - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 49,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952108/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-directo.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 882593,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-el-corazon-las-dicta-con-sulya",
+    "title": "El Corazón las Dicta (Con Sulya)",
+    "originalFileName": "El corazón las dicta (Con Sulya) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 189,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952110/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-el-corazon-las-dicta-con-sulya.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3122078,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-el-drama-de-amar-acustico-con-teko",
+    "title": "El Drama de Amar (Acústico) (Con Teko)",
+    "originalFileName": "El drama de amar (Acústico) (Con Teko) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 196,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952112/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-el-drama-de-amar-acustico-con-teko.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3234521,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-el-drama-de-amar-con-shinoflow",
+    "title": "El Drama de Amar(Con Shinoflow)",
+    "originalFileName": "El drama de amar(Con shinoflow).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 203,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952114/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-el-drama-de-amar-con-shinoflow.mp3",
+        "format": "MP3",
+        "bitrate": 192,
+        "fileSize": 5045701,
+        "qualityLabel": "192 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-elisava-sin-mas",
+    "title": "Elisava Sin Mas",
+    "originalFileName": "Elisava sin mas - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 182,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952115/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-elisava-sin-mas.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3010849,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-elisava",
+    "title": "Elisava",
+    "originalFileName": "Elisava.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 262,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952118/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-elisava.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 4320813,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-espejo-espejito-intro-inedito",
+    "title": "Espejo Espejito (Intro Inédito)",
+    "originalFileName": "Espejo espejito (Intro inédito) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 343,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952123/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-espejo-espejito-intro-inedito.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 5681490,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-estaciones-shinoflow-bebe",
+    "title": "Estaciones - Shinoflow Bebe",
+    "originalFileName": "Estaciones - Shinoflow  Bebe.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 178,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952125/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-estaciones-shinoflow-bebe.mp3",
+        "format": "MP3",
+        "bitrate": 186,
+        "fileSize": 4155634,
+        "qualityLabel": "186 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-freestyle-con-deru-samo-rome-eme",
+    "title": "Freestyle (Con Deru, Samo, Rome & Eme)",
+    "originalFileName": "Freestyle (Con Deru, Samo, Rome & Eme) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 217,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952126/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-freestyle-con-deru-samo-rome-eme.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3570101,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-freestyle-con-teko",
+    "title": "Freestyle (Con Teko)",
+    "originalFileName": "Freestyle (Con Teko) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 105,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952128/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-freestyle-con-teko.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1774761,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-fuga-de-cerebros",
+    "title": "Fuga de Cerebros",
+    "originalFileName": "Fuga de Cerebros.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 218,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952129/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-fuga-de-cerebros.mp3",
+        "format": "MP3",
+        "bitrate": 64,
+        "fileSize": 1863276,
+        "qualityLabel": "64 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-hielo-y-ceniza-con-victimas-de-la-monotonia",
+    "title": "Hielo y Ceniza (Con Víctimas de la Monotonía)",
+    "originalFileName": "Hielo y ceniza (Con Víctimas de la Monotonía) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 147,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952130/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-hielo-y-ceniza-con-victimas-de-la-monotonia.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2450035,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-iris",
+    "title": "Iris",
+    "originalFileName": "Iris - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 168,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952133/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-iris.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2786405,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-justo-lo-que-merezco",
+    "title": "Justo Lo Que Merezco",
+    "originalFileName": "Justo lo que merezco - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 161,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952134/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-justo-lo-que-merezco.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2673990,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-kilos-de-fonk-con-brazone",
+    "title": "Kilos de Fonk (Con Brazone)",
+    "originalFileName": "Kilos de Fonk (Con Brazone) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 210,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952136/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-kilos-de-fonk-con-brazone.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3552571,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-la-linea-de-las-hadas",
+    "title": "La Linea de las Hadas",
+    "originalFileName": "La linea de las hadas.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 165,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952138/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-la-linea-de-las-hadas.mp3",
+        "format": "MP3",
+        "bitrate": 192,
+        "fileSize": 3963883,
+        "qualityLabel": "192 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-leche-con-choco",
+    "title": "Leche con Choco",
+    "originalFileName": "Leche con Choco.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 181,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952140/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-leche-con-choco.mp3",
+        "format": "MP3",
+        "bitrate": 320,
+        "fileSize": 7372168,
+        "qualityLabel": "320 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-lejos-de-la-tristeza",
+    "title": "Lejos de la Tristeza",
+    "originalFileName": "Lejos de la Tristeza.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 170,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952142/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-lejos-de-la-tristeza.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2836440,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-luz-de-luna-pekado",
+    "title": "Luz de Luna (pekado)",
+    "originalFileName": "Luz de luna (pekado).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 249,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952147/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-luz-de-luna-pekado.mp3",
+        "format": "MP3",
+        "bitrate": 256,
+        "fileSize": 8263662,
+        "qualityLabel": "256 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-mi-corazon",
+    "title": "Mi Corazón",
+    "originalFileName": "Mi corazón - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 77,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952149/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-mi-corazon.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1329836,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-mis-dias-son-sin-luna",
+    "title": "Mis Dias Son Sin Luna",
+    "originalFileName": "Mis dias son sin luna - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 56,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952150/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-mis-dias-son-sin-luna.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 991100,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-monaxia-soledad-con-adriana-babali",
+    "title": "Monaxia (Soledad) (Con Adriana Babali)",
+    "originalFileName": "Monaxia (Soledad) (Con Adriana Babali) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 224,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952154/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-monaxia-soledad-con-adriana-babali.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3682543,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-nadie-espera-tanto-con-teko",
+    "title": "Nadie Espera Tanto (Con Teko)",
+    "originalFileName": "Nadie espera tanto (Con Teko).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 174,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952156/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-nadie-espera-tanto-con-teko.mp3",
+        "format": "MP3",
+        "bitrate": 160,
+        "fileSize": 3477504,
+        "qualityLabel": "160 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-no-encuentro-las-palabras",
+    "title": "No Encuentro las Palabras",
+    "originalFileName": "No encuentro las palabras - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 140,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952157/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-no-encuentro-las-palabras.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2338373,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-no-me-reconozcas",
+    "title": "No Me Reconozcas",
+    "originalFileName": "No me reconozcas - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 154,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952158/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-no-me-reconozcas.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2562809,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-no-podras-tener-mis-suenos",
+    "title": "No Podrás Tener Mis Sueños",
+    "originalFileName": "No podrás tener mis sueños - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 91,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952159/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-no-podras-tener-mis-suenos.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1551314,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-para-nadie",
+    "title": "Para Nadie",
+    "originalFileName": "Para nadie - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 77,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952162/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-para-nadie.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1327661,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-pequenas-promesas-con-teko",
+    "title": "Pequenas Promesas (Con Teko)",
+    "originalFileName": "Pequenas promesas (Con Teko).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 156,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952171/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-pequenas-promesas-con-teko.mp3",
+        "format": "MP3",
+        "bitrate": 320,
+        "fileSize": 6243372,
+        "qualityLabel": "320 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-pequeo-campen-pequeo-campen",
+    "title": "Pequeo Campen - Pequeo Campen",
+    "originalFileName": "Pequeo Campen - Pequeo Campen.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 188,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952175/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-pequeo-campen-pequeo-campen.mp3",
+        "format": "MP3",
+        "bitrate": 8,
+        "fileSize": 1387841,
+        "qualityLabel": "8 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-pequena-cancion-de-amanecer",
+    "title": "Pequeña Canción de Amanecer",
+    "originalFileName": "Pequeña canción de amanecer - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 91,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952164/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-pequena-cancion-de-amanecer.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1551316,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-pequeno-campeon-directo-sala-buho-real",
+    "title": "Pequeño Campeon (Directo) (Sala Búho Real)",
+    "originalFileName": "Pequeño campeon (Directo) (Sala Búho Real) - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 238,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952174/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-pequeno-campeon-directo-sala-buho-real.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3904038,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-poema-cromatico",
+    "title": "Poema Cromático",
+    "originalFileName": "Poema cromático - Shinoflow.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 56,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952176/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-poema-cromatico.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 991114,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-poema-inedito",
+    "title": "Poema Inédito",
+    "originalFileName": "Poema inédito - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 70,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952179/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-poema-inedito.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1319168,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-poli-zoe-cover",
+    "title": "Poli (Zoe Cover)",
+    "originalFileName": "Poli (Zoe cover).mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 157,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952186/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-poli-zoe-cover.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2514970,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-ponme-flow-primera-version-con-carlos-talavera",
+    "title": "Ponme Flow (Primera Versión) (Con Carlos Talavera)",
+    "originalFileName": "Ponme flow (Primera Versión) (Con Carlos Talavera) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 224,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952188/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-ponme-flow-primera-version-con-carlos-talavera.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3680399,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-por-que-se-frustran-con-zarkos-zeck-kemur-gray",
+    "title": "Por Que Se Frustran (Con Zarkos, Zeck, Kemur & Gray)",
+    "originalFileName": "Por que se frustran (Con Zarkos, Zeck, Kemur & Gray) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 343,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952192/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-por-que-se-frustran-con-zarkos-zeck-kemur-gray.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 5578947,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-prohibido-crecer",
+    "title": "Prohibido Crecer",
+    "originalFileName": "Prohibido crecer - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 98,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952195/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-prohibido-crecer.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1664129,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-quiereme",
+    "title": "Quiereme",
+    "originalFileName": "Quiereme - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 350,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952198/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-quiereme.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 5690498,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-rima-timida",
+    "title": "Rima Timida",
+    "originalFileName": "Rima timida.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 144,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952200/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-rima-timida.mp3",
+        "format": "MP3",
+        "bitrate": 160,
+        "fileSize": 2873669,
+        "qualityLabel": "160 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-scratch-jazz-con-sulfis-cansino-gama-hong",
+    "title": "Scratch & Jazz (Con Sulfis, Cansino & Gama Hong)",
+    "originalFileName": "Scratch & Jazz (Con Sulfis, Cansino & Gama Hong) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 287,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952202/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-scratch-jazz-con-sulfis-cansino-gama-hong.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 4791607,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-senoras",
+    "title": "Señoras",
+    "originalFileName": "Señoras.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 152,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952204/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-senoras.mp3",
+        "format": "MP3",
+        "bitrate": 96,
+        "fileSize": 1823026,
+        "qualityLabel": "96 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-siempre-que-te-pregunto-con-genios-de-la-cachimba",
+    "title": "Siempre Que Te Pregunto (Con Genios de la Cachimba)",
+    "originalFileName": "Siempre que te pregunto (Con Genios De La Cachimba) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 343,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952208/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-siempre-que-te-pregunto-con-genios-de-la-cachimba.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 5584203,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-sin-poesia-no-con-hhector",
+    "title": "Sin Poesía No (Con HHector)",
+    "originalFileName": "Sin poesía no (Con HHector) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 196,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952213/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-sin-poesia-no-con-hhector.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3226231,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-tema-inedito",
+    "title": "Tema Inédito",
+    "originalFileName": "Tema inédito - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 112,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952214/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-tema-inedito.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1992662,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-tienes-que-ser-mi-novia-de-2-b",
+    "title": "Tienes Que Ser Mi Novia de 2°B",
+    "originalFileName": "Tienes que ser mi novia de 2°B.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 171,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952218/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-tienes-que-ser-mi-novia-de-2-b.mp3",
+        "format": "MP3",
+        "bitrate": 320,
+        "fileSize": 6827658,
+        "qualityLabel": "320 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-turismo-galactico-con-pryon",
+    "title": "Turismo Galáctico (Con Pryon)",
+    "originalFileName": "Turismo Galáctico (Con Pryon) - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 168,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952221/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-turismo-galactico-con-pryon.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 2880762,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-turismo-galactico",
+    "title": "Turismo Galáctico",
+    "originalFileName": "Turismo Galáctico - Carlos Sadness-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 70,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952223/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-turismo-galactico.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1305160,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-universos-infinit",
+    "title": "Universos Infinit",
+    "originalFileName": "Universos infinit.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 234,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952226/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-universos-infinit.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 3745147,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
+  {
+    "id": "shino-flow-ineditas-0-y-no-eres-feliz",
+    "title": "Y No Eres Feliz",
+    "originalFileName": "Y no eres feliz - Shinoflow-mc.mp3",
+    "artist": "Shino Flow",
+    "albumId": "shino-flow-ineditas",
+    "releaseType": "compilation",
+    "duration": 98,
+    "coverUrl": "/covers/shino-flow-ineditas.png",
+    "coverSource": "uploaded",
+    "tags": [
+      "ineditas"
+    ],
+    "audioSources": [
+      {
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786952228/shinoteca/music/shino-flow-ineditas/shino-flow-ineditas-0-y-no-eres-feliz.mp3",
+        "format": "MP3",
+        "bitrate": 128,
+        "fileSize": 1664128,
+        "qualityLabel": "128 kbps",
+        "downloadable": true
+      }
+    ],
+    "isPublished": true,
+    "isDownloadable": true,
+    "commentsEnabled": true,
+    "needsReview": true,
+    "metadataStatus": "partial",
+    "originalFolderName": "Inéditas",
+    "isThirdParty": false
+  },
   {
     "id": "porta-no-es-cuestion-de-edades-1-bienvenidos-a-mi-show",
     "title": "Bienvenidos a Mi Show",

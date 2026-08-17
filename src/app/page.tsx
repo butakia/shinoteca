@@ -18,18 +18,17 @@ import type { ReleaseType } from "@/lib/types";
 const releaseGroups: ReleaseType[] = ["maqueta", "ep", "lp", "compilation"];
 
 export default function HomePage() {
-  const { getAllSongs, getFeaturedSongs, getAvailableYears, getSongById, getVisibleAlbums } = useSongs();
+  const { getAllSongs, getAvailableYears, getSongById, getVisibleAlbums } = useSongs();
   const { getNoticeText } = useNotices();
   const { playQueueAt, history, playCounts } = usePlayer();
   const { favorites } = useFavorites();
 
   const allSongs = getAllSongs();
-  const featured = getFeaturedSongs();
   const albums = getVisibleAlbums();
   const years = getAvailableYears();
   const authorizationNotice = getNoticeText("authorization");
 
-  const hero = featured[0] ?? allSongs[0];
+  const mixAlbums = [...albums.filter((album) => album.coverUrl), ...albums.filter((album) => !album.coverUrl)].slice(0, 4);
 
   const recentlyPlayed = history
     .map((id) => getSongById(id))
@@ -60,14 +59,13 @@ export default function HomePage() {
 
   return (
     <div className="pb-10">
-      {/* hero */}
-      {hero && (
+      {allSongs.length > 0 && (
         <section className="relative overflow-hidden px-4 pb-10 pt-6 sm:px-6 lg:px-8">
           <div className="absolute inset-0 -z-10">
-            {hero.coverUrl ? (
+            {mixAlbums[0]?.coverUrl ? (
               <div
                 className="h-full w-full scale-110 bg-cover bg-center opacity-25 blur-3xl"
-                style={{ backgroundImage: `url(${hero.coverUrl})` }}
+                style={{ backgroundImage: `url(${mixAlbums[0].coverUrl})` }}
               />
             ) : (
               <div className="h-full w-full bg-gradient-to-br from-red-900/30 via-background to-background" />
@@ -80,23 +78,30 @@ export default function HomePage() {
               {authorizationNotice}
             </p>
           )}
-          <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-end">
-            <div className="w-40 shrink-0 sm:w-56">
-              <CoverImage src={hero.coverUrl} title={hero.title} size="large" priority />
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+            <div className="grid w-44 shrink-0 grid-cols-2 gap-1.5 rounded-2xl bg-white/5 p-2 shadow-2xl ring-1 ring-white/10 sm:w-60">
+              {mixAlbums.map((album, index) => (
+                <div key={album.id} className="aspect-square overflow-hidden rounded-lg">
+                  <CoverImage src={album.coverUrl} title={album.title} size="large" priority={index === 0} />
+                </div>
+              ))}
             </div>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground sm:text-4xl">{hero.title}</h1>
-              <p className="mt-1 text-sm text-foreground-muted sm:text-base">
-                {hero.alias ?? hero.artist} {hero.year ? `· ${hero.year}` : ""} ·{" "}
-                {releaseTypeLabels[hero.releaseType]}
+            <div className="max-w-xl">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.24em] text-accent">Selección aleatoria</p>
+              <h1 className="text-3xl font-bold text-foreground sm:text-5xl">Mix de la Shinoteca</h1>
+              <p className="mt-2 text-sm leading-relaxed text-foreground-muted sm:text-base">
+                Una mezcla distinta de canciones del archivo para que la música continúe sin depender de un solo lanzamiento.
               </p>
               <div className="mt-4 flex items-center gap-3">
                 <button
                   type="button"
-                  onClick={() => playQueueAt(featured.length ? featured : allSongs, 0)}
+                  onClick={() => {
+                    const shuffled = [...allSongs].sort(() => Math.random() - 0.5);
+                    playQueueAt(shuffled, 0);
+                  }}
                   className="flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-transform hover:bg-accent/90 active:scale-95"
                 >
-                  <Play className="h-4 w-4" fill="currentColor" strokeWidth={0} /> Reproducir destacadas
+                  <Play className="h-4 w-4" fill="currentColor" strokeWidth={0} /> Reproducir mix
                 </button>
                 <button
                   type="button"
@@ -106,22 +111,12 @@ export default function HomePage() {
                   }}
                   className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-surface-hover"
                 >
-                  <Shuffle className="h-4 w-4" /> Mix aleatorio
+                  <Shuffle className="h-4 w-4" /> Otro orden
                 </button>
               </div>
             </div>
           </div>
         </section>
-      )}
-
-      {featured.length > 0 && (
-        <HorizontalRail title="Canciones destacadas" viewAllHref="/canciones">
-          {featured.map((song) => (
-            <div key={song.id} className="w-40 shrink-0 sm:w-44">
-              <SongCard song={song} queue={featured} />
-            </div>
-          ))}
-        </HorizontalRail>
       )}
 
       <HorizontalRail title="Álbumes y recopilaciones recientes" viewAllHref="/albumes">
@@ -131,6 +126,28 @@ export default function HomePage() {
           </div>
         ))}
       </HorizontalRail>
+
+      <section className="mb-8 px-4 sm:px-6 lg:px-8">
+        <div className="mb-3 flex items-center gap-2">
+          <Heart className="h-4 w-4 text-foreground-muted" />
+          <h2 className="text-lg font-semibold text-foreground sm:text-xl">Favoritas</h2>
+        </div>
+        {favoriteSongs.length === 0 ? (
+          <EmptyState
+            icon={Heart}
+            title="No tienes canciones favoritas"
+            description="Toca el corazón en cualquier canción para guardarla aquí."
+          />
+        ) : (
+          <div className="flex gap-4 overflow-x-auto pb-2">
+            {favoriteSongs.map((song) => (
+              <div key={song.id} className="w-40 shrink-0 sm:w-44">
+                <SongCard song={song} queue={favoriteSongs} />
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
 
       <section className="mb-8 px-4 sm:px-6 lg:px-8">
         <div className="mb-3 flex items-center gap-2">
@@ -175,28 +192,6 @@ export default function HomePage() {
       </section>
 
       <AdBanner slot="home-1" />
-
-      <section className="mb-8 px-4 sm:px-6 lg:px-8">
-        <div className="mb-3 flex items-center gap-2">
-          <Heart className="h-4 w-4 text-foreground-muted" />
-          <h2 className="text-lg font-semibold text-foreground sm:text-xl">Favoritas</h2>
-        </div>
-        {favoriteSongs.length === 0 ? (
-          <EmptyState
-            icon={Heart}
-            title="No tienes canciones favoritas"
-            description="Toca el corazón en cualquier canción para guardarla aquí."
-          />
-        ) : (
-          <div className="flex gap-4 overflow-x-auto pb-2">
-            {favoriteSongs.map((song) => (
-              <div key={song.id} className="w-40 shrink-0 sm:w-44">
-                <SongCard song={song} queue={favoriteSongs} />
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
 
       <section className="mb-8 px-4 sm:px-6 lg:px-8">
         <div className="mb-3 flex items-center gap-2">
