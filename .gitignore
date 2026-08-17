@@ -32,6 +32,9 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# ...except the template, which carries no secrets and is what tells anyone
+# deploying this (or setting it up on another machine) which vars to define.
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +42,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# prisma / sqlite
+/src/generated/prisma
+*.db
+*.db-journal
+
+# Source music library. scripts/import-music.mjs reads this folder and copies
+# what the site actually serves into public/music + public/covers, so these
+# originals (hundreds of MB, plus .rar/.pdf strays) never need to be in the
+# repo or in a deployment.
+/musica
+
+# Runtime uploads written by the local-disk fallback in upload-storage.ts.
+# In production these go to Cloudinary instead; locally they're throwaway.
+/public/uploads
+
+# Audio servido en producción desde Cloudinary (ver scripts/upload-audio-to-cdn.mjs).
+# Vercel gratis limita los archivos fuente de un despliegue a 100 MB y esto pesa
+# ~690 MB, así que el audio vive en el CDN y no en el repositorio. Las carátulas
+# (~2 MB) sí se quedan aquí: son pequeñas y evitan una dependencia extra.
+# scripts/cdn-manifest.json (sí versionado) mapea cada pista a su URL del CDN.
+/public/music

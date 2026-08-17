@@ -1,0 +1,70 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+// Newly uploaded songs only — the existing demo catalog in src/lib/data stays
+// a static fixture. SongsContext merges this table's rows in alongside it, so
+// nothing about the existing (working) catalog/edit-overlay system has to
+// change to support real uploads.
+//
+// isPublished doubles as the moderation flag: uploads from regular users are
+// created with isPublished=false ("pendiente de aprobación") and only show up
+// in the public catalog once an admin approves them from /admin. Admin's own
+// uploads are created already-published, skipping the queue.
+model UploadedSong {
+  id          String   @id @default(cuid())
+  title       String
+  artist      String
+  alias       String?
+  releaseType String   @default("single")
+  year        Int?
+  genre       String?
+  duration    Int      @default(0)
+  coverUrl    String?
+  audioUrl    String
+  lyrics      String?
+  description String?
+  tags        String   @default("[]") // JSON string array
+  isPublished Boolean  @default(true)
+  isThirdParty Boolean @default(false)
+  createdAt   DateTime @default(now())
+  uploaderId  String?
+  uploader    User?    @relation(fields: [uploaderId], references: [id], onDelete: SetNull)
+}
+
+// Real accounts — replaces the old client-only demo-password gate on /admin.
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  displayName  String
+  isAdmin      Boolean   @default(false)
+  createdAt    DateTime  @default(now())
+  sessions     Session[]
+  uploads      UploadedSong[]
+}
+
+// Server-side sessions: the cookie only carries the random token below, so a
+// stolen/expired token can be invalidated server-side by deleting the row —
+// something a self-contained signed JWT can't do without a revocation list.
+model Session {
+  token     String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+// Global "me gusta" counter per song, shared by every visitor (unlike the
+// per-browser reaction stored in localStorage). songId matches whatever id
+// the app already uses for that song — demo catalog ids and up-* uploaded
+// ids alike — so no foreign key to UploadedSong.
+model SongLike {
+  songId String @id
+  count  Int    @default(0)
+}

@@ -1,26 +1,158 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --background-elevated: #0c0505;
+  --surface: #170a0a;
+  --surface-hover: #221010;
+  --border: rgba(255, 255, 255, 0.08);
+  --foreground: #f7f4f4;
+  --foreground-muted: #a89c9c;
+  --accent: #e11d2f;
+  --accent-soft: rgba(225, 29, 47, 0.18);
+  --danger: #ff6b4a;
+  --success: #34d399;
+  --player-height: 96px;
+  --mobile-nav-height: 64px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --mobile-nav-height: 0px;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.glass {
+  background: rgba(14, 14, 22, 0.9);
+  backdrop-filter: blur(32px) saturate(140%);
+  -webkit-backdrop-filter: blur(32px) saturate(140%);
+  border: 1px solid var(--border);
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.volume-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+.volume-slider::-moz-range-track {
+  background: transparent;
+}
+
+/* A row of tabs/chips that overflows its container (e.g. the player's
+   "A continuación / Letra / Relacionadas / Comentarios" row) is meant to be
+   swiped past, but without this the browser draws its normal thick scrollbar
+   across it — on some devices that scrollbar visually eats the row and reads
+   as "broken"/unswipeable rather than as a horizontal list. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+  animation: shimmer 1.6s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skeleton::after { animation: none; }
+}
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-page-in {
+  animation: page-in 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-page-in { animation: none; }
+}
+
+@keyframes song-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-song-in {
+  animation: song-in 280ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-song-in { animation: none; }
 }
