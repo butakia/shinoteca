@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Search, X, Clock, Disc3, ListMusic, ArrowLeft } from "lucide-react";
 import clsx from "clsx";
-import { getAlbumById, getAllAlbums } from "@/lib/data";
+import { getAlbumById } from "@/lib/data";
 import { useSongs } from "@/context/SongsContext";
 import { usePlaylists } from "@/context/PlaylistsContext";
 import { STORAGE_KEYS } from "@/lib/storage";
@@ -28,7 +28,7 @@ export default function SearchBar({ className }: { className?: string }) {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
-  const { searchSongs } = useSongs();
+  const { searchSongs, getVisibleAlbums } = useSongs();
   const { playlists } = usePlaylists();
 
   useEffect(() => setMounted(true), []);
@@ -135,7 +135,7 @@ export default function SearchBar({ className }: { className?: string }) {
   const trimmedQuery = query.trim();
   const results = trimmedQuery ? searchSongs(query).slice(0, 6) : [];
   const albumResults = trimmedQuery
-    ? getAllAlbums()
+    ? getVisibleAlbums()
         .filter((a) => a.title.toLowerCase().includes(trimmedQuery.toLowerCase()))
         .slice(0, 3)
     : [];

@@ -1,11 +1,13 @@
-import { getAllAlbums } from "@/lib/data";
+"use client";
+
+import { useSongs } from "@/context/SongsContext";
 import AlbumCard from "@/components/song/AlbumCard";
 import PageHeader from "@/components/common/PageHeader";
 
-export const metadata = { title: "Álbumes" };
-
 export default function AlbumsPage() {
-  const albums = getAllAlbums();
+  // getVisibleAlbums (no getAllAlbums) para que respete "Solo Shinoflow".
+  const { getVisibleAlbums } = useSongs();
+  const albums = getVisibleAlbums();
 
   return (
     <div className="px-4 pb-8 pt-6 sm:px-6 lg:px-8">

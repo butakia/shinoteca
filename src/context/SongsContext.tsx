@@ -6,7 +6,7 @@ import { useArtistFilter } from "@/context/ArtistFilterContext";
 import { STORAGE_KEYS } from "@/lib/storage";
 import { songs as baseSongs } from "@/lib/data/songs";
 import { getAllAlbums, getAlbumById, getAllArtists, getArtistById } from "@/lib/data";
-import type { Song, ReleaseType } from "@/lib/types";
+import type { Song, ReleaseType, Album } from "@/lib/types";
 
 type SongOverrides = Record<string, Partial<Song>>;
 
@@ -24,6 +24,9 @@ type SongsContextValue = {
   getAvailableYears: () => number[];
   getFeaturedSongs: () => Song[];
   searchSongs: (query: string) => Song[];
+  // Álbumes visibles según el filtro "Solo Shinoflow". Las páginas deben usar
+  // esto en vez de getAllAlbums() de lib/data, que no conoce el filtro.
+  getVisibleAlbums: () => Album[];
   // admin/back-office
   allSongsIncludingUnpublished: Song[];
   updateSong: (id: string, patch: Partial<Song>) => void;
@@ -118,6 +121,20 @@ export function SongsProvider({ children }: { children: React.ReactNode }) {
 
   const getFeaturedSongs = useCallback(() => getAllSongs().filter((s) => s.isFeatured), [getAllSongs]);
 
+  // Un álbum se oculta si está marcado como de otro artista o si, con el
+  // filtro puesto, ya no le queda ninguna canción visible. Sin esto los
+  // álbumes de terceros seguían listados y al abrirlos salía "no existe":
+  // parecía que el interruptor no hacía nada cuando en realidad solo
+  // filtraba canciones.
+  const getVisibleAlbums = useCallback(() => {
+    const albums = getAllAlbums();
+    if (!onlyShinoflow) return albums;
+    const visibles = getAllSongs();
+    return albums.filter(
+      (a) => !a.isThirdParty && visibles.some((s) => s.albumId === a.id)
+    );
+  }, [onlyShinoflow, getAllSongs]);
+
   const searchSongs = useCallback(
     (query: string) => {
       const q = query.trim().toLowerCase();
@@ -172,6 +189,7 @@ export function SongsProvider({ children }: { children: React.ReactNode }) {
     getAvailableYears,
     getFeaturedSongs,
     searchSongs,
+    getVisibleAlbums,
     allSongsIncludingUnpublished,
     updateSong,
     deleteSong,

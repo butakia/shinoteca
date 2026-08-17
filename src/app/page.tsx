@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Play, Shuffle, Clock, TrendingUp, Heart, CalendarDays, Disc3, Archive } from "lucide-react";
-import { getAllAlbums } from "@/lib/data";
 import { useSongs } from "@/context/SongsContext";
 import { useNotices } from "@/context/NoticesContext";
 import { usePlayer } from "@/context/PlayerContext";
@@ -19,14 +18,14 @@ import type { ReleaseType } from "@/lib/types";
 const releaseGroups: ReleaseType[] = ["maqueta", "ep", "lp", "compilation"];
 
 export default function HomePage() {
-  const { getAllSongs, getFeaturedSongs, getAvailableYears, getSongById } = useSongs();
+  const { getAllSongs, getFeaturedSongs, getAvailableYears, getSongById, getVisibleAlbums } = useSongs();
   const { getNoticeText } = useNotices();
   const { playQueueAt, history, playCounts } = usePlayer();
   const { favorites } = useFavorites();
 
   const allSongs = getAllSongs();
   const featured = getFeaturedSongs();
-  const albums = getAllAlbums();
+  const albums = getVisibleAlbums();
   const years = getAvailableYears();
   const authorizationNotice = getNoticeText("authorization");
 

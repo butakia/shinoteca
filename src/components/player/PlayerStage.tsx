@@ -165,8 +165,14 @@ export default function PlayerStage({
         {/* Compact "chip" row, mirroring the YouTube Music reference: the few
             actions people actually reach for live here as pills; everything
             else moved into the "más" sheet below so mobile no longer shows
-            eight loose icons wrapped across two ragged rows. */}
-        <div className="no-scrollbar flex w-full max-w-sm items-center justify-center gap-2 overflow-x-auto pb-0.5">
+            eight loose icons wrapped across two ragged rows.
+
+            flex-wrap, no scroll horizontal: `justify-center` + `overflow-x-auto`
+            recorta el contenido por AMBOS lados cuando no cabe (el desbordamiento
+            por el lado inicial queda inalcanzable en flexbox), que es justo como
+            se veía —la píldora de me gusta cortada a la izquierda y "Más" a la
+            derecha—. Envolviendo en varias líneas nunca se recorta nada. */}
+        <div className="flex w-full flex-wrap items-center justify-center gap-2">
           <div className="flex shrink-0 items-center rounded-full bg-white/10">
             <button
               type="button"
