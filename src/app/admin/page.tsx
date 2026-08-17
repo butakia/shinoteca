@@ -11,9 +11,11 @@ import AdminInstitutional from "./_components/AdminInstitutional";
 import AdminCredits from "./_components/AdminCredits";
 import AdminAppearance from "./_components/AdminAppearance";
 import AdminNotices from "./_components/AdminNotices";
+import AdminAlbums from "./_components/AdminAlbums";
 
 const TABS = [
   { key: "canciones", label: "Canciones" },
+  { key: "albumes", label: "Álbumes" },
   { key: "metadatos", label: "Metadatos" },
   { key: "paginas", label: "Páginas institucionales" },
   { key: "creditos", label: "Créditos" },
@@ -55,9 +57,9 @@ export default function AdminPage() {
       <div className="mb-6 flex items-start gap-2 rounded-xl border border-border bg-surface/60 p-3 text-xs text-foreground-muted">
         <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
         <p>
-          Las ediciones de canciones, páginas institucionales, créditos, avisos y colores se
-          guardan en este navegador y se reflejan de inmediato en el resto del sitio (biblioteca,
-          buscador, álbumes, reproductor, playlists). Los archivos de audio nuevos todavía se
+          Las ediciones de canciones, álbumes y avisos se guardan en el servidor y se reflejan en
+          todos los dispositivos. Las demás preferencias del panel se aplican de inmediato en el
+          sitio. Los archivos de audio nuevos todavía se
           importan con <code className="text-foreground">scripts/import-music.mjs</code> — ver README.
         </p>
       </div>
@@ -81,6 +83,7 @@ export default function AdminPage() {
       </div>
 
       {tab === "canciones" && <AdminSongs />}
+      {tab === "albumes" && <AdminAlbums />}
       {tab === "metadatos" && <AdminMetadata />}
       {tab === "paginas" && <AdminInstitutional />}
       {tab === "creditos" && <AdminCredits />}

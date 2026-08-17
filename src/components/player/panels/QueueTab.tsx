@@ -30,17 +30,18 @@ export default function QueueTab() {
           <button
             type="button"
             role="switch"
+            aria-label="Reproducción automática"
             aria-checked={autoplay}
             onClick={() => setAutoplay(!autoplay)}
             className={clsx(
-              "relative h-6 w-11 shrink-0 rounded-full shadow-inner transition-colors",
-              autoplay ? "bg-accent" : "bg-white/25"
+              "relative h-7 w-12 shrink-0 rounded-full border shadow-inner transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+              autoplay ? "border-accent bg-accent shadow-[0_0_14px_rgba(239,35,60,0.28)]" : "border-white/20 bg-white/10"
             )}
           >
             <span
               className={clsx(
-                "absolute top-0.5 h-5 w-5 rounded-full bg-white shadow-md transition-transform",
-                autoplay ? "translate-x-[22px]" : "translate-x-0.5"
+                "absolute left-0.5 top-0.5 h-5.5 w-5.5 rounded-full bg-white shadow-md transition-transform duration-200",
+                autoplay ? "translate-x-5" : "translate-x-0"
               )}
             />
           </button>

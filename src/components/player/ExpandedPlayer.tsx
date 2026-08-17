@@ -54,6 +54,24 @@ export default function ExpandedPlayer() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [isExpanded, setExpanded]);
 
+  // The expanded player is a full-screen view. Lock both scroll roots while
+  // it is open so the page underneath keeps its exact position and does not
+  // leave a second scrollbar visible behind the player.
+  useEffect(() => {
+    if (!isExpanded) return;
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousRootOverflow = document.documentElement.style.overflow;
+    const previousOverscroll = document.body.style.overscrollBehavior;
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overscrollBehavior = "none";
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousRootOverflow;
+      document.body.style.overscrollBehavior = previousOverscroll;
+    };
+  }, [isExpanded]);
+
   // Links inside PlayerStage/SidePanel already close the overlay before
   // navigating, but the primary Sidebar/MobileNav links don't know this
   // overlay exists — clicking them while it's open changed the page

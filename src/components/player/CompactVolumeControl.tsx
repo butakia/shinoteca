@@ -12,6 +12,7 @@ export default function CompactVolumeControl({ className }: { className?: string
   const { volume, muted, setVolume, toggleMute } = usePlayer();
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const effectiveVolume = muted ? 0 : volume;
   const Icon = effectiveVolume === 0 ? VolumeX : effectiveVolume < 0.5 ? Volume1 : Volume2;
 
@@ -24,12 +25,26 @@ export default function CompactVolumeControl({ className }: { className?: string
     return () => window.removeEventListener("mousedown", onClickOutside);
   }, [open]);
 
+  function keepOpen() {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpen(true);
+  }
+
+  function closeSoon() {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpen(false), 300);
+  }
+
   return (
     <div
       ref={rootRef}
       className={clsx("group/volume relative", className)}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={keepOpen}
+      onMouseLeave={closeSoon}
+      onFocusCapture={keepOpen}
+      onBlurCapture={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node | null)) closeSoon();
+      }}
     >
       <button
         type="button"
@@ -49,6 +64,8 @@ export default function CompactVolumeControl({ className }: { className?: string
           break hover is now `pb-2` *inside* this box, i.e. still part of the
           continuously-hoverable region, with the visible card drawn above it. */}
       <div
+        onPointerDown={keepOpen}
+        onMouseEnter={keepOpen}
         className={clsx(
           "absolute bottom-full left-1/2 z-20 -translate-x-1/2 pb-2 transition-all duration-150",
           open ? "pointer-events-auto scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"

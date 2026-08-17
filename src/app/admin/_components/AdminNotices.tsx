@@ -1,9 +1,11 @@
 "use client";
 
-import { useState } from "react";
-import { Eye, EyeOff, RotateCcw } from "lucide-react";
+import { useRef, useState } from "react";
+import { ImagePlus, RotateCcw } from "lucide-react";
+import clsx from "clsx";
 import { useNotices } from "@/context/NoticesContext";
 import { noticeLabels, type NoticeKey, type NoticeVisibility } from "@/lib/notices";
+import { uploadCoverImageAction } from "@/lib/upload-actions";
 
 const KEYS = Object.keys(noticeLabels) as NoticeKey[];
 
@@ -17,6 +19,27 @@ const visibilityLabels: Record<NoticeVisibility, string> = {
 export default function AdminNotices() {
   const { notices, updateNotice, resetNotice } = useNotices();
   const [openKey, setOpenKey] = useState<NoticeKey | null>(null);
+  const [uploading, setUploading] = useState(false);
+  const imageInputRef = useRef<HTMLInputElement>(null);
+
+  async function uploadAnnouncementImage(file: File) {
+    setUploading(true);
+    try {
+      const dataUrl = await new Promise<string>((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result));
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+      const result = await uploadCoverImageAction(dataUrl, file.name);
+      if (result.url) updateNotice("welcome", { imageUrl: result.url });
+      else window.alert(result.error ?? "No se pudo subir la imagen.");
+    } catch {
+      window.alert("No se pudo subir la imagen.");
+    } finally {
+      setUploading(false);
+    }
+  }
 
   return (
     <div>
@@ -39,10 +62,24 @@ export default function AdminNotices() {
                 <div className="flex shrink-0 items-center gap-2">
                   <button
                     type="button"
+                    role="switch"
+                    aria-checked={notice.enabled}
                     onClick={() => updateNotice(key, { enabled: !notice.enabled })}
-                    className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs text-foreground-muted hover:bg-surface-hover"
+                    className="flex items-center gap-2 rounded-full text-xs font-medium text-foreground-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/70"
                   >
-                    {notice.enabled ? <Eye className="h-3.5 w-3.5" /> : <EyeOff className="h-3.5 w-3.5" />}
+                    <span
+                      className={clsx(
+                        "relative h-7 w-12 rounded-full border shadow-inner transition-all",
+                        notice.enabled ? "border-accent bg-accent" : "border-white/20 bg-white/10"
+                      )}
+                    >
+                      <span
+                        className={clsx(
+                          "absolute left-0.5 top-0.5 h-5.5 w-5.5 rounded-full bg-white shadow-md transition-transform",
+                          notice.enabled ? "translate-x-5" : "translate-x-0"
+                        )}
+                      />
+                    </span>
                     {notice.enabled ? "Visible" : "Oculto"}
                   </button>
                   <button
@@ -57,6 +94,70 @@ export default function AdminNotices() {
 
               {open && (
                 <div className="space-y-3 border-t border-border p-3">
+                  {key === "welcome" && (
+                    <>
+                      <div>
+                        <label className="mb-1 block text-xs font-medium text-foreground">Título del anuncio</label>
+                        <input
+                          value={notice.title ?? ""}
+                          onChange={(e) => updateNotice(key, { title: e.target.value })}
+                          className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-foreground outline-none focus:border-accent/50"
+                        />
+                      </div>
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-[1fr_auto]">
+                        <div>
+                          <label className="mb-1 block text-xs font-medium text-foreground">Imagen del anuncio</label>
+                          <input
+                            value={notice.imageUrl ?? ""}
+                            onChange={(e) => updateNotice(key, { imageUrl: e.target.value })}
+                            placeholder="/agradecimiento.jpg o https://…"
+                            className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-foreground outline-none focus:border-accent/50"
+                          />
+                        </div>
+                        <div className="self-end">
+                          <input
+                            ref={imageInputRef}
+                            type="file"
+                            accept="image/jpeg,image/png,image/webp,image/avif"
+                            className="hidden"
+                            onChange={(e) => {
+                              const file = e.target.files?.[0];
+                              if (file) uploadAnnouncementImage(file);
+                            }}
+                          />
+                          <button
+                            type="button"
+                            disabled={uploading}
+                            onClick={() => imageInputRef.current?.click()}
+                            className="flex items-center gap-1.5 rounded-lg border border-border px-3 py-2 text-sm text-foreground hover:bg-surface-hover disabled:opacity-60"
+                          >
+                            <ImagePlus className="h-4 w-4" /> {uploading ? "Subiendo…" : "Subir imagen"}
+                          </button>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                        <div>
+                          <label className="mb-1 block text-xs font-medium text-foreground">Texto del botón</label>
+                          <input
+                            value={notice.buttonLabel ?? ""}
+                            onChange={(e) => updateNotice(key, { buttonLabel: e.target.value })}
+                            className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-foreground outline-none focus:border-accent/50"
+                          />
+                        </div>
+                        <div>
+                          <label className="mb-1 block text-xs font-medium text-foreground">Mostrar después de (segundos)</label>
+                          <input
+                            type="number"
+                            min={0}
+                            max={300}
+                            value={notice.delaySeconds ?? 10}
+                            onChange={(e) => updateNotice(key, { delaySeconds: Number(e.target.value) })}
+                            className="w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm text-foreground outline-none focus:border-accent/50"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
                   <div>
                     <label className="mb-1 block text-xs font-medium text-foreground">Texto visible</label>
                     <textarea

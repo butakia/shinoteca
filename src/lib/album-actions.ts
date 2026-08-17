@@ -22,11 +22,20 @@ function slugify(text: string): string {
 // Without this cascade, changing the album cover from /admin would do
 // nothing visible anywhere a song is actually displayed.
 async function cascadeCoverToSongs(albumId: string, coverUrl: string | undefined) {
-  const songIds = getAllSongs()
+  const staticSongIds = getAllSongs()
     .filter((s) => s.albumId === albumId)
     .map((s) => s.id);
+  const allExistingOverrides = await prisma.songOverride.findMany();
+  const overrideSongIds = allExistingOverrides.flatMap((row) => {
+    try {
+      return JSON.parse(row.patch).albumId === albumId ? [row.songId] : [];
+    } catch {
+      return [];
+    }
+  });
+  const songIds = [...new Set([...staticSongIds, ...overrideSongIds])];
   if (songIds.length === 0) return;
-  const existing = await prisma.songOverride.findMany({ where: { songId: { in: songIds } } });
+  const existing = allExistingOverrides.filter((row) => songIds.includes(row.songId));
   const existingPatch = new Map(existing.map((row) => [row.songId, JSON.parse(row.patch)]));
   await Promise.all(
     songIds.map((songId) => {

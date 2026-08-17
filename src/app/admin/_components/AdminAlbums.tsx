@@ -170,8 +170,9 @@ export default function AdminAlbums() {
           title="Crear álbum"
           onClose={() => setCreating(false)}
           onSave={async (patch) => {
-            const { id: _unused, ...rest } = patch as Album;
-            const result = await createAlbum(rest);
+            const albumData = { ...(patch as Album) };
+            delete (albumData as Partial<Album>).id;
+            const result = await createAlbum(albumData as Omit<Album, "id">);
             if (result.error) {
               window.alert(result.error);
               return;

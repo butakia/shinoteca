@@ -30,6 +30,10 @@ export type Notice = {
   enabled: boolean;
   priority: number;
   visibility: NoticeVisibility;
+  title?: string;
+  imageUrl?: string;
+  buttonLabel?: string;
+  delaySeconds?: number;
   createdAt: string;
   updatedAt: string;
 };
@@ -145,9 +149,16 @@ export const defaultNotices: Record<NoticeKey, Notice> = {
   ),
   welcome: make(
     "welcome",
-    "Bienvenido a SHINOTECA — un archivo musical comunitario hecho por fans.",
-    "Banner de bienvenida (primera visita)",
-    { enabled: false, visibility: "once" }
+    "Este proyecto es sin fines de lucro. Todo nació aquí, en este grupo de WhatsApp. Un agradecimiento especial para ~Bhlue🐺, Manu♡, Arturo BG y ~Ivy MH. Atentamente, el creador A. Oliden. Shinoflow, si lees esto, te extrañamos. Vuelve al rap.",
+    "Anuncio emergente al entrar en la web",
+    {
+      enabled: true,
+      visibility: "always",
+      title: "Gracias por ser parte de este archivo",
+      imageUrl: "/agradecimiento.jpg",
+      buttonLabel: "Continuar en SHINOTECA",
+      delaySeconds: 10,
+    }
   ),
   donations: make(
     "donations",

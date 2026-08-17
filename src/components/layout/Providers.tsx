@@ -13,6 +13,7 @@ import { NoticesProvider } from "@/context/NoticesContext";
 import { PremiumProvider } from "@/context/PremiumContext";
 import { DownloadsProvider } from "@/context/DownloadsContext";
 import { ArtistFilterProvider } from "@/context/ArtistFilterContext";
+import GratitudeModal from "@/components/layout/GratitudeModal";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -28,7 +29,10 @@ export default function Providers({ children }: { children: React.ReactNode }) {
                     <PlaylistsProvider>
                       <PremiumProvider>
                         <DownloadsProvider>
-                          <PlayerProvider>{children}</PlayerProvider>
+                          <PlayerProvider>
+                            {children}
+                            <GratitudeModal />
+                          </PlayerProvider>
                         </DownloadsProvider>
                       </PremiumProvider>
                     </PlaylistsProvider>
