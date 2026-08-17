@@ -309,7 +309,7 @@ export default function SearchBar({ className }: { className?: string }) {
 
   // Phones: a full-screen sheet (see the isMobile note above).
   const mobileSheet = open && mounted && isMobile && createPortal(
-    <div className="fixed inset-0 z-[100] flex flex-col bg-background">
+    <div ref={dropdownRef} className="fixed inset-0 z-[100] flex flex-col bg-background">
       <div className="flex shrink-0 items-center gap-2 border-b border-border px-3 py-3">
         <button
           type="button"
