@@ -7,6 +7,7 @@ import { usePlayer } from "@/context/PlayerContext";
 import { useSongs } from "@/context/SongsContext";
 import PlayerStage from "@/components/player/PlayerStage";
 import SidePanel, { type SidePanelTab } from "@/components/player/SidePanel";
+import NextTrackPreview from "@/components/player/NextTrackPreview";
 import PageDisabledNotice from "@/components/institutional/PageDisabledNotice";
 import { getRelatedSection } from "@/lib/related";
 
@@ -61,8 +62,11 @@ export default function PlayPage() {
         </button>
       </div>
 
-      <div className="min-w-0 flex-1">
-        <PlayerStage activeTab={sidePanelTab} onOpenTab={openPanel} />
+      <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+        <div className="min-h-0 flex-1">
+          <PlayerStage activeTab={sidePanelTab} onOpenTab={openPanel} />
+        </div>
+        <NextTrackPreview onOpen={() => openPanel("queue")} />
       </div>
 
       {/* persistent side panel on desktop */}

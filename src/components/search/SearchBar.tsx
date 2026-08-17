@@ -7,6 +7,7 @@ import { Search, X, Clock, Disc3, ListMusic, ArrowLeft } from "lucide-react";
 import clsx from "clsx";
 import { useSongs } from "@/context/SongsContext";
 import { usePlaylists } from "@/context/PlaylistsContext";
+import { usePlayer } from "@/context/PlayerContext";
 import { STORAGE_KEYS } from "@/lib/storage";
 import { usePersistentState } from "@/hooks/usePersistentState";
 import CoverImage from "@/components/media/CoverImage";
@@ -29,6 +30,7 @@ export default function SearchBar({ className }: { className?: string }) {
   const router = useRouter();
   const { searchSongs, getVisibleAlbums, getAlbumById } = useSongs();
   const { playlists } = usePlaylists();
+  const { playSong } = usePlayer();
 
   useEffect(() => setMounted(true), []);
 
@@ -218,10 +220,12 @@ export default function SearchBar({ className }: { className?: string }) {
               return (
                 <button
                   key={song.id}
+                  type="button"
+                  aria-label={`Reproducir ${song.title}`}
                   onClick={() => {
                     commitHistory(query);
                     setOpen(false);
-                    router.push(`/canciones/${song.id}`);
+                    playSong(song);
                   }}
                   className="flex w-full items-center gap-3.5 rounded-lg px-2.5 py-2.5 text-left hover:bg-surface-hover"
                 >

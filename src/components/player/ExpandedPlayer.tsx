@@ -10,6 +10,7 @@ import { useSongs } from "@/context/SongsContext";
 import PlayerStage from "./PlayerStage";
 import SidePanel, { type SidePanelTab } from "./SidePanel";
 import PlayerAdSlot from "./PlayerAdSlot";
+import NextTrackPreview from "./NextTrackPreview";
 import Logo from "@/components/layout/Logo";
 import SearchBar from "@/components/search/SearchBar";
 import MobileMenu from "@/components/layout/MobileMenu";
@@ -160,8 +161,11 @@ export default function ExpandedPlayer() {
       </div>
 
       <div className="flex flex-1 overflow-hidden">
-        <div className="min-w-0 flex-1">
-          <PlayerStage activeTab={sidePanelTab} onOpenTab={openPanel} onNavigate={() => setExpanded(false)} />
+        <div className="flex min-w-0 flex-1 flex-col overflow-hidden">
+          <div className="min-h-0 flex-1">
+            <PlayerStage activeTab={sidePanelTab} onOpenTab={openPanel} onNavigate={() => setExpanded(false)} />
+          </div>
+          <NextTrackPreview onOpen={() => openPanel("queue")} />
         </div>
 
         {/* persistent side panel on desktop */}
