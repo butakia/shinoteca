@@ -126,8 +126,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-1-bienvenidos-a-mi-show.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938752/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-1-bienvenidos-a-mi-show.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 1129231,
@@ -159,8 +159,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-2-he-vuelto.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938831/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-2-he-vuelto.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4554813,
@@ -192,8 +192,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-3-cosas-de-la-vida.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938839/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-3-cosas-de-la-vida.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 6459540,
@@ -225,8 +225,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-4-no-es-cuestion-de-edades-con-mizok-y-jota.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938842/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-4-no-es-cuestion-de-edades-con-mizok-y-jota.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3911325,
@@ -258,8 +258,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-5-dias-grises-con-abram.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938846/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-5-dias-grises-con-abram.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3672932,
@@ -291,8 +291,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-6-entre-avenidas-y-aceras.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938851/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-6-entre-avenidas-y-aceras.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4130019,
@@ -324,8 +324,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-7-decide-rapido-o-muere-despacio.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938855/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-7-decide-rapido-o-muere-despacio.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2317764,
@@ -357,8 +357,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-8-mi-realidad.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938862/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-8-mi-realidad.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4265167,
@@ -390,8 +390,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-9-las-ninyas-de-hoy-en-dia-todas-son-unas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938872/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-9-las-ninyas-de-hoy-en-dia-todas-son-unas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4827356,
@@ -423,8 +423,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-10-pese-a-todo-con-zpu.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938753/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-10-pese-a-todo-con-zpu.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3626374,
@@ -456,8 +456,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-11-este-es-mi-rap.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938755/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-11-este-es-mi-rap.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3885744,
@@ -489,8 +489,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-12-de-otro-color-con-mizok.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938758/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-12-de-otro-color-con-mizok.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4167222,
@@ -522,8 +522,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-13-he-cambiado-con-shinoflow-y-el-cansino.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938761/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-13-he-cambiado-con-shinoflow-y-el-cansino.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4194980,
@@ -555,8 +555,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-14-mi-cuento-de-hadas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938765/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-14-mi-cuento-de-hadas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4079184,
@@ -588,8 +588,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-15-mi-eden-de-tristeza-con-pumpkin.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938769/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-15-mi-eden-de-tristeza-con-pumpkin.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4377055,
@@ -621,8 +621,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-16-corazon-boli-y-papel.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938773/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-16-corazon-boli-y-papel.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4279970,
@@ -654,8 +654,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-17-es-por-moda-con-syra.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938777/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-17-es-por-moda-con-syra.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3094895,
@@ -687,8 +687,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-18-son-recuerdos-y-promesas-rotas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938828/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-18-son-recuerdos-y-promesas-rotas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4373287,
@@ -720,8 +720,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-19-desde-lo-alto-con-samo-dan-y-fado.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938829/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-19-desde-lo-alto-con-samo-dan-y-fado.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4589387,
@@ -753,8 +753,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-20-sigo-buscando-respuestas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938832/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-20-sigo-buscando-respuestas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3402815,
@@ -786,8 +786,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-21-fantasia-rota-igual-a-realidad-distorsionada.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938834/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-21-fantasia-rota-igual-a-realidad-distorsionada.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2792320,
@@ -819,8 +819,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-22-y-se-cierra-el-telon.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938835/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-22-y-se-cierra-el-telon.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2347433,
@@ -852,8 +852,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-23-tetris-rap-y-outro.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938836/shinoteca/music/porta-no-es-cuestion-de-edades/porta-no-es-cuestion-de-edades-23-tetris-rap-y-outro.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2187335,
@@ -885,8 +885,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-1-lo-que-se-avecina.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938876/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-1-lo-que-se-avecina.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2301099,
@@ -918,8 +918,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-2-porque-puedo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938962/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-2-porque-puedo.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5426694,
@@ -951,8 +951,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-3-hay-siempre-un-sentimiento-muerto-en-un-corazon-roto.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938992/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-3-hay-siempre-un-sentimiento-muerto-en-un-corazon-roto.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 7479109,
@@ -984,8 +984,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-4-no-hay-truco.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938999/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-4-no-hay-truco.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5782015,
@@ -1017,8 +1017,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-5-distancia.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939006/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-5-distancia.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4054352,
@@ -1050,8 +1050,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-6-erase-una-vez-con-2karas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939016/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-6-erase-una-vez-con-2karas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5743089,
@@ -1083,8 +1083,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-7-voy-a-saco.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939023/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-7-voy-a-saco.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3232209,
@@ -1116,8 +1116,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-8-las-ninas-unas-guarras-pero-los-tios-unos-cerdos-con-may.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939032/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-8-las-ninas-unas-guarras-pero-los-tios-unos-cerdos-con-may.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 6269585,
@@ -1149,8 +1149,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-9-tras-mi-luna-de-cristal-con-jota.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939037/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-9-tras-mi-luna-de-cristal-con-jota.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3073683,
@@ -1182,8 +1182,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-10-rumores-lo-que-se-comenta-por-alli.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938884/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-10-rumores-lo-que-se-comenta-por-alli.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 7199780,
@@ -1215,8 +1215,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-11-mi-rosa-negra-con-bazzel.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938889/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-11-mi-rosa-negra-con-bazzel.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3889486,
@@ -1248,8 +1248,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-12-mi-frikimundo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938896/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-12-mi-frikimundo.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3494125,
@@ -1281,8 +1281,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-13-nuestra-historia-de-2-estribillo-por-may.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938904/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-13-nuestra-historia-de-2-estribillo-por-may.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5029332,
@@ -1314,8 +1314,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-14-proxima-estacion-rap-con-enigmah-cloud-nayck-y-chus.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938916/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-14-proxima-estacion-rap-con-enigmah-cloud-nayck-y-chus.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5833362,
@@ -1347,8 +1347,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-15-el-90-por-ciento-de-mi-eres-tu-con-zpu.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938926/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-15-el-90-por-ciento-de-mi-eres-tu-con-zpu.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5391146,
@@ -1380,8 +1380,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-16-un-sincorazon-en-el-reino-de-los-corazones.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938931/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-16-un-sincorazon-en-el-reino-de-los-corazones.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3752467,
@@ -1413,8 +1413,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-17-solo-un-poco-mas-de-mi-con-bazzel.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938943/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-17-solo-un-poco-mas-de-mi-con-bazzel.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5399372,
@@ -1446,8 +1446,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-18-cuando-te-vas-con-abram-y-fado.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938952/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-18-cuando-te-vas-con-abram-y-fado.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4783007,
@@ -1479,8 +1479,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-19-el-jugador-tambien-forma-parte-del-juego.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938955/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-19-el-jugador-tambien-forma-parte-del-juego.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3106298,
@@ -1512,8 +1512,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-20-harto-y-cansado.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938971/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-20-harto-y-cansado.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 6016080,
@@ -1545,8 +1545,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-21-estados.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938977/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-21-estados.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4817545,
@@ -1578,8 +1578,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-22-y-para-terminar.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938980/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-22-y-para-terminar.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2321086,
@@ -1611,8 +1611,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/porta-no-hay-truco/porta-no-hay-truco-23-dragon-ball-rap.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938984/shinoteca/music/porta-no-hay-truco/porta-no-hay-truco-23-dragon-ball-rap.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2326284,
@@ -1645,8 +1645,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-1-las-barreras-del-sonido.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939043/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-1-las-barreras-del-sonido.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4232754,
@@ -1679,8 +1679,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-2-te-echare-de-menos.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939045/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-2-te-echare-de-menos.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 961580,
@@ -1713,8 +1713,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-3-la-verdadera-verdad.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939051/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-3-la-verdadera-verdad.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 4722586,
@@ -1747,8 +1747,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-4-pereza-2004.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939060/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-4-pereza-2004.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5338240,
@@ -1781,8 +1781,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-5-insomnio-2004.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939065/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-5-insomnio-2004.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3376131,
@@ -1815,8 +1815,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-6-vuelas-por-encima.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939071/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-6-vuelas-por-encima.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 3993712,
@@ -1849,8 +1849,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-7-rmx-las-barreras-del-sonido.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939077/shinoteca/music/shinoflow-adelantando-relojes-2005/shinoflow-adelantando-relojes-2005-7-rmx-las-barreras-del-sonido.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3497564,
@@ -1882,8 +1882,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-abrazando-la-tormenta.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939082/shinoteca/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-abrazando-la-tormenta.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 3514574,
@@ -1915,8 +1915,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-ainsa.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939086/shinoteca/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-ainsa.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 2608682,
@@ -1948,8 +1948,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-atraes-a-los-relampagos.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939095/shinoteca/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-atraes-a-los-relampagos.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 6670200,
@@ -1981,8 +1981,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-estoy-vivo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939101/shinoteca/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-estoy-vivo.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 6306576,
@@ -2014,8 +2014,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-fue-tan-importante.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939118/shinoteca/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-fue-tan-importante.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 8410965,
@@ -2047,8 +2047,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-se-fue-con-bebe.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939132/shinoteca/music/shinoflow-atraes-a-los-relampagos-2011/shinoflow-atraes-a-los-relampagos-2011-0-se-fue-con-bebe.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 7104878,
@@ -2080,8 +2080,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-misterioso-ciclo-de-tu-pestaneo/shinoflow-el-misterioso-ciclo-de-tu-pestaneo-1-el-misterioso-ciclo-de-tu-pestane.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939136/shinoteca/music/shinoflow-el-misterioso-ciclo-de-tu-pestaneo/shinoflow-el-misterioso-ciclo-de-tu-pestaneo-1-el-misterioso-ciclo-de-tu-pestane.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 3909901,
@@ -2113,8 +2113,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-misterioso-ciclo-de-tu-pestaneo/shinoflow-el-misterioso-ciclo-de-tu-pestaneo-2-striptease.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939141/shinoteca/music/shinoflow-el-misterioso-ciclo-de-tu-pestaneo/shinoflow-el-misterioso-ciclo-de-tu-pestaneo-2-striptease.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 3931588,
@@ -2146,8 +2146,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-misterioso-ciclo-de-tu-pestaneo/shinoflow-el-misterioso-ciclo-de-tu-pestaneo-3-cancion-para-elisa.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939148/shinoteca/music/shinoflow-el-misterioso-ciclo-de-tu-pestaneo/shinoflow-el-misterioso-ciclo-de-tu-pestaneo-3-cancion-para-elisa.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 4176094,
@@ -2180,8 +2180,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-1-terrorismo-emocional.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939151/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-1-terrorismo-emocional.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 1982380,
@@ -2214,8 +2214,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-2-amor-descafeinado.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939209/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-2-amor-descafeinado.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5669164,
@@ -2248,8 +2248,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-3-viaje-al-centro-de-mi-cor.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939213/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-3-viaje-al-centro-de-mi-cor.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5163851,
@@ -2282,8 +2282,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-4-tristura.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939218/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-4-tristura.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5892354,
@@ -2316,8 +2316,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-5-huelga-sentimental.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939225/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-5-huelga-sentimental.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5089873,
@@ -2350,8 +2350,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-6-dos-player.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939232/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-6-dos-player.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 4210904,
@@ -2384,8 +2384,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-7-espejo-espejito.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939241/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-7-espejo-espejito.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 8204504,
@@ -2418,8 +2418,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-8-del-romance-al-hiperreali.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939246/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-8-del-romance-al-hiperreali.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5128743,
@@ -2452,8 +2452,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-9-sexo-entre-androides.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939257/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-9-sexo-entre-androides.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 7705461,
@@ -2486,8 +2486,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-10-una-mas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939156/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-10-una-mas.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 2226016,
@@ -2520,8 +2520,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-11-auspicio.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939165/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-11-auspicio.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5131250,
@@ -2554,8 +2554,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-12-desafio-metafisico.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939173/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-12-desafio-metafisico.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 6187015,
@@ -2588,8 +2588,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-13-la-muerte-de-la-bela-lug.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939180/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-13-la-muerte-de-la-bela-lug.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 3627851,
@@ -2622,8 +2622,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-14-pirata-de-agua-dulce.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939190/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-14-pirata-de-agua-dulce.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 5496129,
@@ -2656,8 +2656,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-15-extrano-extranado.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939202/shinoteca/music/shinoflow-el-presidente-de-los-estados-de-animo-2007/shinoflow-el-presidente-de-los-estados-de-animo-2007-15-extrano-extranado.mp3",
         "format": "MP3",
         "bitrate": 161,
         "fileSize": 10233931,
@@ -2689,8 +2689,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-1-octubre-perfume.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939262/shinoteca/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-1-octubre-perfume.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 2450372,
@@ -2722,8 +2722,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-2-sol-de-invierno.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939272/shinoteca/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-2-sol-de-invierno.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 6894323,
@@ -2755,8 +2755,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-3-alicia-encadenada.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939276/shinoteca/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-3-alicia-encadenada.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 5154567,
@@ -2788,8 +2788,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-4-chila-con-chino.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939279/shinoteca/music/shinoflow-maqueta-2002/shinoflow-maqueta-2002-4-chila-con-chino.mp3",
         "format": "MP3",
         "bitrate": 320,
         "fileSize": 3434665,
@@ -2821,8 +2821,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-medias-naranjas-y-otras-mitades/shinoflow-medias-naranjas-y-otras-mitades-1-estoy-vivo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939283/shinoteca/music/shinoflow-medias-naranjas-y-otras-mitades/shinoflow-medias-naranjas-y-otras-mitades-1-estoy-vivo.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 5334989,
@@ -2854,8 +2854,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-medias-naranjas-y-otras-mitades/shinoflow-medias-naranjas-y-otras-mitades-2-medias-naranjas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939287/shinoteca/music/shinoflow-medias-naranjas-y-otras-mitades/shinoflow-medias-naranjas-y-otras-mitades-2-medias-naranjas.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 4557590,
@@ -2887,8 +2887,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-medias-naranjas-y-otras-mitades/shinoflow-medias-naranjas-y-otras-mitades-3-apaga-las-luces.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939291/shinoteca/music/shinoflow-medias-naranjas-y-otras-mitades/shinoflow-medias-naranjas-y-otras-mitades-3-apaga-las-luces.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 3697639,
@@ -2921,8 +2921,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-1-intro-shinopsis.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939294/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-1-intro-shinopsis.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 1606937,
@@ -2955,8 +2955,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-2-demiurgo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939351/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-2-demiurgo.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 4441789,
@@ -2989,8 +2989,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-3-mato-por-amor.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939356/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-3-mato-por-amor.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 3727084,
@@ -3023,8 +3023,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-4-angel-hurbano.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939362/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-4-angel-hurbano.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3741330,
@@ -3057,8 +3057,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-5-amante-de-jade.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939368/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-5-amante-de-jade.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4079825,
@@ -3091,8 +3091,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-6-shin-verguenza.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939374/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-6-shin-verguenza.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 4669061,
@@ -3125,8 +3125,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-7-interludio-cerdo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939380/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-7-interludio-cerdo.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 2913774,
@@ -3159,8 +3159,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-9-filosoflow.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939385/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-9-filosoflow.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3510908,
@@ -3193,8 +3193,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-10-ponme-flow-feat-carlos-de-flowkloriko.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939298/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-10-ponme-flow-feat-carlos-de-flowkloriko.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2955969,
@@ -3227,8 +3227,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-11-motherfonkers-feat-ziniko-y-gerion.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939304/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-11-motherfonkers-feat-ziniko-y-gerion.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 5215627,
@@ -3261,8 +3261,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-12-summum-feat-mr-brazone.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939308/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-12-summum-feat-mr-brazone.mp3",
         "format": "MP3",
         "bitrate": 112,
         "fileSize": 2430799,
@@ -3295,8 +3295,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-13-iidiotas-feat-gerion.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939316/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-13-iidiotas-feat-gerion.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 5676011,
@@ -3329,8 +3329,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-14-iinterludio-jazzflow.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939320/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-14-iinterludio-jazzflow.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 1204265,
@@ -3363,8 +3363,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-15-pijas-pijipis.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939327/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-15-pijas-pijipis.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3399472,
@@ -3397,8 +3397,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-16-he-hablado-con-dios.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939336/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-16-he-hablado-con-dios.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4464694,
@@ -3431,8 +3431,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-17-bonus-track-feat-ziniko-y-lechowski.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939344/shinoteca/music/shinoflow-tu-principe-azul-destine-2002/shinoflow-tu-principe-azul-destine-2002-17-bonus-track-feat-ziniko-y-lechowski.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4477338,
@@ -3464,8 +3464,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-1-intro-a-nunca-jamas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939387/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-1-intro-a-nunca-jamas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 1465681,
@@ -3497,8 +3497,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-2-viejo-cuentos-de-hadas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939422/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-2-viejo-cuentos-de-hadas.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 1063186,
@@ -3530,8 +3530,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-3-mato-por-amor.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939428/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-3-mato-por-amor.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 3720403,
@@ -3563,8 +3563,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-4-a-las-12.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939431/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-4-a-las-12.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 1191500,
@@ -3596,8 +3596,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-5-recantando-lo-pasado.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939436/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-5-recantando-lo-pasado.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2631787,
@@ -3629,8 +3629,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-6-ponme-flow.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939441/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-6-ponme-flow.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2946092,
@@ -3662,8 +3662,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-7-interludio-cerdo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939446/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-7-interludio-cerdo.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 2903879,
@@ -3695,8 +3695,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-8-afilado-estilo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939450/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-8-afilado-estilo.mp3",
         "format": "MP3",
         "bitrate": 96,
         "fileSize": 2121145,
@@ -3728,8 +3728,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-9-mas-loco-que-todos.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939455/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-9-mas-loco-que-todos.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 3161905,
@@ -3761,8 +3761,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-10-lluvia-de-ranas.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939395/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-10-lluvia-de-ranas.mp3",
         "format": "MP3",
         "bitrate": 192,
         "fileSize": 6328155,
@@ -3794,8 +3794,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-11-verso-en-sonetos.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939398/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-11-verso-en-sonetos.mp3",
         "format": "MP3",
         "bitrate": 96,
         "fileSize": 2311108,
@@ -3827,8 +3827,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-12-shinverguenza.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939404/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-12-shinverguenza.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 4662379,
@@ -3860,8 +3860,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-13-domiurgo.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939410/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-13-domiurgo.mp3",
         "format": "MP3",
         "bitrate": 160,
         "fileSize": 4435113,
@@ -3893,8 +3893,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-14-una-de-cada-100-mentiras.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939414/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-14-una-de-cada-100-mentiras.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 2836733,
@@ -3926,8 +3926,8 @@ export const importedSongs: Song[] = [
     ],
     "audioSources": [
       {
-        "type": "local",
-        "url": "/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-15-el-amante-de-jade.mp3",
+        "type": "external",
+        "url": "https://res.cloudinary.com/p6ppgwux/video/upload/v1786939420/shinoteca/music/shinoflow-viejo-cuento-de-hadas-2004/shinoflow-viejo-cuento-de-hadas-2004-15-el-amante-de-jade.mp3",
         "format": "MP3",
         "bitrate": 128,
         "fileSize": 4069985,

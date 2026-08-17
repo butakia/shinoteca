@@ -20,8 +20,8 @@ const manualSongs: Song[] = [
     tags: ["shino-flow", "carlos-sadness", "single"],
     audioSources: [
       {
-        type: "local",
-        url: "/music/dame-un-minuto.mp3",
+        type: "external",
+        url: "https://res.cloudinary.com/p6ppgwux/video/upload/v1786938751/shinoteca/music/dame-un-minuto.mp3",
         format: "MP3",
         bitrate: 192,
         fileSize: 2021387,
