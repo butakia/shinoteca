@@ -43,21 +43,39 @@ const CAMPOS = [
     titulo: "Turso — Database URL",
     ayuda:
       "  Entra a https://turso.tech, abre tu base de datos.\n" +
-      '  Empieza con "libsql://".',
+      '  Es CORTA y termina en ".turso.io", por ejemplo:\n' +
+      "     libsql://shinoteca-omar.turso.io\n" +
+      "  ⚠ NO es el token (ese es larguísimo y empieza por eyJ).",
     secreto: false,
-    validar: (v) =>
-      v.startsWith("libsql://") || v.startsWith("https://")
-        ? null
-        : 'Debe empezar con "libsql://". Copia la URL completa.',
+    validar: (v) => {
+      if (!v.startsWith("libsql://") && !v.startsWith("https://")) {
+        return 'Debe empezar con "libsql://".';
+      }
+      // Un token pegado por error en este campo es el fallo más común: es
+      // larguísimo y lleva "eyJ" (cabecera de un JWT). La URL real ronda los
+      // 40 caracteres, así que distinguirlos es trivial y evita un error de
+      // red confuso mucho más adelante.
+      if (v.includes("eyJ") || v.length > 120) {
+        return "Eso parece el TOKEN, no la URL. La URL es corta y termina en .turso.io";
+      }
+      if (!/\.turso\.io\/?$/.test(v.split("?")[0])) {
+        return 'Debería terminar en ".turso.io". Cópiala de la página de tu base de datos.';
+      }
+      return null;
+    },
   },
   {
     clave: "TURSO_AUTH_TOKEN",
     titulo: "Turso — Auth Token",
     ayuda:
       '  En tu base de datos, botón "Create Token".\n' +
-      "  Es un texto muy largo. Cópialo entero.\n" +
+      "  Es un texto MUY largo que empieza por eyJ. Cópialo entero.\n" +
       "  (Al escribirlo aquí no se verá en pantalla, es normal.)",
     secreto: true,
+    validar: (v) =>
+      v.startsWith("libsql://")
+        ? "Eso parece la URL, no el token. El token empieza por eyJ."
+        : null,
   },
 ];
 

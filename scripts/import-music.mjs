@@ -8,7 +8,7 @@
 // Re-running is idempotent: IDs are derived from stable slugs, so existing
 // entries get overwritten in place rather than duplicated. Source files in
 // /musica are only ever read, never modified or deleted.
-import { readdirSync, statSync, mkdirSync, copyFileSync, writeFileSync, readFileSync, existsSync } from "node:fs";
+import { readdirSync, statSync, mkdirSync, copyFileSync, writeFileSync, readFileSync, existsSync, unlinkSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseFile } from "music-metadata";
@@ -263,8 +263,54 @@ export const importedSongs: Song[] = ${JSON.stringify(songs, null, 2)};
 `;
 
   writeFileSync(outFile, banner + body);
+
+  // Limpieza de sobrantes: los nombres de archivo derivan del título ya
+  // limpio, así que al mejorar esa limpieza cambian los slugs y las copias
+  // con el nombre anterior se quedaban en public/music para siempre. Llegaron
+  // a acumularse 56 archivos huérfanos (222 MB) que además se subían al CDN
+  // gastando cuota. Aquí se borra todo lo que este catálogo ya no referencia.
+  const referenciadas = new Set(
+    songs.flatMap((s) => s.audioSources.map((a) => a.url)).filter((u) => u.startsWith("/music/"))
+  );
+  // El single suelto vive en src/lib/data/songs.ts, no en este generado.
+  referenciadas.add("/music/dame-un-minuto.mp3");
+  // Con el audio ya en el CDN las URLs son absolutas; en ese caso se conserva
+  // la copia local equivalente (sigue sirviendo para desarrollo sin red).
+  for (const song of songs) {
+    for (const src of song.audioSources) {
+      if (!src.url.startsWith("/music/")) {
+        referenciadas.add(`/music/${slugify(albums.find((a) => a.id === song.albumId)?.id ?? "")}/`);
+      }
+    }
+  }
+
+  function recorrer(dir) {
+    const out = [];
+    for (const nombre of readdirSync(dir)) {
+      const completo = path.join(dir, nombre);
+      if (statSync(completo).isDirectory()) out.push(...recorrer(completo));
+      else if (AUDIO_EXT.includes(path.extname(nombre).toLowerCase())) out.push(completo);
+    }
+    return out;
+  }
+
+  let huerfanos = 0;
+  let bytesLiberados = 0;
+  for (const archivo of recorrer(publicMusicDir)) {
+    const publico = "/" + path.relative(path.join(root, "public"), archivo).split(path.sep).join("/");
+    // Se conserva si el catálogo lo referencia directamente, o si su ruta
+    // aparece en el manifiesto del CDN (ahí las URLs ya no son locales).
+    if (referenciadas.has(publico) || cdnManifest[publico]) continue;
+    bytesLiberados += statSync(archivo).size;
+    unlinkSync(archivo);
+    huerfanos++;
+  }
+
   console.log(`Imported ${albums.length} albums, ${songs.length} tracks.`);
   console.log(`Needs review: ${songs.filter((s) => s.needsReview).length}`);
+  if (huerfanos > 0) {
+    console.log(`Limpiados ${huerfanos} archivos huérfanos (${(bytesLiberados / 1024 / 1024).toFixed(0)} MB).`);
+  }
 }
 
 run();
